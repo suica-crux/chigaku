@@ -23,7 +23,7 @@ export default async function CategoryPage({
       categoryTitle = titleData.title;
     }
   } catch (error) {
-    console.log(`title.json not found for ${category}`);
+    console.log(`title.json not found for ${category}`, error);
   }
 
   // 🔥 `category/` 以下のフォルダ (トピック) を取得
@@ -45,7 +45,7 @@ export default async function CategoryPage({
               topicTitle = titleData.title;
             }
           } catch (error) {
-            console.log(`title.json not found for ${category}/${topicSlug}`);
+            console.log(`title.json not found for ${category}/${topicSlug}`, error);
           }
 
           return { slug: topicSlug, title: topicTitle };
