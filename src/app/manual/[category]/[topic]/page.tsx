@@ -11,7 +11,7 @@ type Topics = {
   };
 };
 
-export default async function TopicPage({ params }: Topics) {
+const TopicPage = async ({ params }: Topics) => {
   const { category, topic } = params;
   const categoryPath = path.join(process.cwd(), `src/app/manual/${category}`);
   const topicPath = path.join(categoryPath, topic);
@@ -58,3 +58,5 @@ export default async function TopicPage({ params }: Topics) {
     </div>
   );
 }
+
+export default TopicPage;
