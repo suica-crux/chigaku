@@ -4,14 +4,14 @@ import path from 'path';
 import Heading from '@/app/components/Heading';
 import { marked } from 'marked';
 
-type TopicPageProps = {
+type Topics = {
   params: {
     category: string;
     topic: string;
   };
 };
 
-export default async function TopicPage({ params }: TopicPageProps) {
+export default async function TopicPage({ params }: Topics) {
   const { category, topic } = params;
   const categoryPath = path.join(process.cwd(), `src/app/manual/${category}`);
   const topicPath = path.join(categoryPath, topic);
