@@ -42,3 +42,6 @@ next-env.d.ts
 
 #img
 *.jpg
+
+
+*.code-profile
