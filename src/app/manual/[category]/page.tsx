@@ -3,11 +3,10 @@ import path from "path";
 import Link from "next/link";
 import Heading from "@/app/components/Heading";
 
-
 export default async function CategoryPage({
   params,
 }: {
-  params: { category: string };
+  params: Promise<{ category: string }>;
 }) {
   const { category } = await Promise.resolve(params);
   const categoryPath = path.join(process.cwd(), `src/app/manual/${category}`);
@@ -45,7 +44,10 @@ export default async function CategoryPage({
               topicTitle = titleData.title;
             }
           } catch (error) {
-            console.log(`title.json not found for ${category}/${topicSlug}`, error);
+            console.log(
+              `title.json not found for ${category}/${topicSlug}`,
+              error
+            );
           }
 
           return { slug: topicSlug, title: topicTitle };
