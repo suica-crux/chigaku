@@ -1,1 +1,1 @@
-![照明のスイッチ](../../../../..//public/images/telescope/照明電源入口.jpg)
+![照明のスイッチ](/images/telescope/照明電源入口.jpg)
