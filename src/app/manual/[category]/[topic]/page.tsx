@@ -1,8 +1,10 @@
-// import Link from 'next/link';
-import { promises as fs } from "fs";
-import path from "path";
-import Heading from "@/app/components/Heading";
-import { marked } from "marked";
+import { promises as fs } from 'fs';
+import path from 'path';
+import Heading from '@/components/Heading';
+import { marked } from 'marked';
+import { MDXRemote } from 'next-mdx-remote/rsc';
+import Photo from '@/components/Photo';
+import Text from '@/components/Text';
 
 export default async function TopicPage({
   params,
@@ -18,11 +20,11 @@ export default async function TopicPage({
 
   let categoryTitle = category;
   let topicTitle = topic;
-  let content = "";
+  let content = '';
 
   try {
-    const categoryTitleFile = path.join(categoryPath, "title.json");
-    const titleData = JSON.parse(await fs.readFile(categoryTitleFile, "utf-8"));
+    const categoryTitleFile = path.join(categoryPath, 'title.json');
+    const titleData = JSON.parse(await fs.readFile(categoryTitleFile, 'utf-8'));
     if (titleData.title) {
       categoryTitle = titleData.title;
     }
@@ -31,8 +33,8 @@ export default async function TopicPage({
   }
 
   try {
-    const topicTitleFile = path.join(topicPath, "title.json");
-    const titleData = JSON.parse(await fs.readFile(topicTitleFile, "utf-8"));
+    const topicTitleFile = path.join(topicPath, 'title.json');
+    const titleData = JSON.parse(await fs.readFile(topicTitleFile, 'utf-8'));
     if (titleData.title) {
       topicTitle = titleData.title;
     }
@@ -41,17 +43,25 @@ export default async function TopicPage({
   }
 
   try {
-    const contentFile = path.join(topicPath, "content.md");
-    const markdown = await fs.readFile(contentFile, "utf-8");
-    content = await marked.parse(markdown);
+    const contentFile = path.join(topicPath, 'content.mdx');
+    content = await fs.readFile(contentFile, 'utf-8');
   } catch (error) {
-    console.error(`content.md not found for topic: ${topic}`, error);
+    console.error(`content.mdx not found for topic: ${topic}`, error);
   }
 
   return (
     <div>
       <Heading title={`${categoryTitle} - ${topicTitle}`} />
-      <div dangerouslySetInnerHTML={{ __html: content }} />
+      <MDXRemote
+        source={content}
+        components={{
+          Photo,
+          Text,
+          img: (props) => (
+            <img {...props} className="w-1/2 mx-auto rounded-lg shadow-lg" />
+          ),
+        }}
+      />
     </div>
   );
 }
