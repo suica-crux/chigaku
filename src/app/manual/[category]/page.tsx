@@ -1,7 +1,7 @@
 import { promises as fs } from "fs";
 import path from "path";
 import Link from "next/link";
-import Heading from "@/app/components/Heading";
+import Heading from "@/components/Heading";
 
 export default async function CategoryPage({
   params,

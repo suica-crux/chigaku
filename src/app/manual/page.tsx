@@ -1,9 +1,9 @@
-import Heading from '../components/Heading';
+import Heading from '@/components/Heading';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
-// import Text from '../components/Text';
+// import Text from '@/components/Text';
 
 export const metadata: Metadata = {
   title: 'マニュアル - 同志社高校地学部',

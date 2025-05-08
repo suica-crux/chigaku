@@ -2,8 +2,8 @@
 
 import React from 'react';
 import Link from 'next/link';
-import Heading from './components/Heading';
-import Text from './components/Text';
+import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 import { useEffect, useState } from 'react';
 import { useRouter } from 'next/navigation';
 
