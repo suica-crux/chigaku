@@ -1,6 +1,6 @@
 import type { Metadata } from 'next';
-import Heading from './components/Heading';
-import Text from './components/Text';
+import Heading from '@/components/Heading';
+import Text from '@/components/Text';
 
 export const metadata: Metadata = {
   title: 'トップページ - 同志社高校地学部',
