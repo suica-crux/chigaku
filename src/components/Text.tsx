@@ -1,27 +1,35 @@
 'use client';
 
 type TextProperty = {
-  text: string;
-  type?: 'normal' | 'small' | 'semi-large';
-  color?: 'black' | 'gray' | 'white';
+  children?: React.ReactNode;
+  size?: 'normal' | 'sm' | 'xl';
+  colour?: 'black' | 'gray' | 'blue' |'red' | 'white';
+  className?: string;
 };
 
 export default function Text({
-  text,
-  type = 'normal',
-  color = 'black',
+  children,
+  size = 'normal',
+  colour = 'black',
+  className = '',
 }: TextProperty) {
-  const textType =
-    type === 'small'
+  // 文字サイズ
+  const textSize =
+    size === 'sm'
       ? 'text-sm'
-      : type === 'semi-large'
+      : size === 'xl'
       ? 'text-xl'
       : 'text-base';
-  const textColor =
-    color === 'gray'
-      ? 'text-gray-500'
-      : color === 'white'
+  // 文字色
+  const textColour =
+    colour === 'gray'
+      ? 'text-gray-700'
+      : colour === 'blue'
+      ? 'text-blue-500'
+      : colour === 'red'
+      ? 'text-red-500'
+      : colour === 'white'
       ? 'text-white'
       : 'text-black';
-  return <p className={`mt-4 ${textType} ${textColor}`}>{text}</p>;
+  return <p className={`${className} ${textSize} ${textColour}`}>{children}</p>;
 }

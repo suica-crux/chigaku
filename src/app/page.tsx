@@ -10,7 +10,7 @@ export default function Home() {
   return (
     <div>
         <Heading title="地学部へようこそ" />
-        <Text text="地学部では、月に一度の夜間天体観測を行っています。" />
+        <Text>地学部では、月に一度の夜間天体観測を行っています。</Text>
     </div>
   );
 }
