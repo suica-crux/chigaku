@@ -1,7 +1,8 @@
-import { promises as fs } from "fs";
-import path from "path";
-import Link from "next/link";
-import Heading from "@/app/components/Heading";
+import { promises as fs } from 'fs';
+import path from 'path';
+import Link from 'next/link';
+import Heading from '@/components/Heading';
+import { titleLoader } from '@/lib/titleLoader';
 
 export default async function CategoryPage({
   params,
@@ -16,13 +17,12 @@ export default async function CategoryPage({
 
   // 🔥 カテゴリーの `title.json` を読み込む
   try {
-    const categoryTitleFile = path.join(categoryPath, "title.json");
-    const titleData = JSON.parse(await fs.readFile(categoryTitleFile, "utf-8"));
-    if (titleData.title) {
-      categoryTitle = titleData.title;
+    const titleData = titleLoader(categoryTitle);
+    if (titleData) {
+      categoryTitle = titleData;
     }
   } catch (error) {
-    console.log(`title.json not found for ${category}`, error);
+    console.error(`title found for ${category}`, error);
   }
 
   // 🔥 `category/` 以下のフォルダ (トピック) を取得
@@ -31,23 +31,19 @@ export default async function CategoryPage({
 
     topics = await Promise.all(
       entries
-        .filter((entry) => entry.isDirectory() && !entry.name.startsWith("["))
+        .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
         .map(async (entry) => {
           const topicSlug = entry.name;
-          const titleFile = path.join(categoryPath, topicSlug, "title.json");
 
           let topicTitle = topicSlug; // デフォルトはフォルダ名
 
           try {
-            const titleData = JSON.parse(await fs.readFile(titleFile, "utf-8"));
-            if (titleData.title) {
-              topicTitle = titleData.title;
+            const titleData = titleLoader(topicTitle);
+            if (titleData) {
+              topicTitle = titleData;
             }
           } catch (error) {
-            console.log(
-              `title.json not found for ${category}/${topicSlug}`,
-              error
-            );
+            console.error(`title not found for ${category}/${topicSlug}`, error);
           }
 
           return { slug: topicSlug, title: topicTitle };

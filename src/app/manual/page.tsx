@@ -1,9 +1,9 @@
-import Heading from '../components/Heading';
+import Heading from '@/components/Heading';
 import type { Metadata } from 'next';
 import Link from 'next/link';
 import { promises as fs } from 'fs';
 import path from 'path';
-// import Text from '../components/Text';
+import { titleLoader } from '@/lib/titleLoader';
 
 export const metadata: Metadata = {
   title: 'マニュアル - 同志社高校地学部',
@@ -21,16 +21,15 @@ export default async function Manual() {
         .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
         .map(async (entry) => {
           const categorySlug = entry.name;
-          const titleFile = path.join(manualPath, categorySlug, 'title.json');
 
           let categoryTitle = categorySlug;
           try {
-            const titleData = JSON.parse(await fs.readFile(titleFile, 'utf-8'));
-            if (titleData.title) {
-              categoryTitle = titleData.title;
+            const titleData = titleLoader(categoryTitle);
+            if (titleData) {
+              categoryTitle = titleData;
             }
           } catch (error) {
-            console.error(`Failed to read title.json in ${categorySlug}`, error);
+            console.error(`Failed to read title in ${categorySlug}`, error);
           }
           return { slug: categorySlug, title: categoryTitle };
         })
