@@ -40,13 +40,25 @@ export default function Header() {
       {/* for mobile */}
       {isOpen && (
         <nav className="md:hidden bg-white shadow-md absolute top-16 left-0 w-full py-2">
-          <Link href="/about" className="block px-4 py-2 hover:bg-gray-100">
+          <Link
+            href="/about"
+            className="block px-4 py-2 hover:bg-gray-100"
+            onClick={() => setIsOpen(false)}
+          >
             About
           </Link>
-          <Link href="/manual" className="block px-4 py-2 hover:bg-gray-100">
+          <Link
+            href="/manual"
+            className="block px-4 py-2 hover:bg-gray-100"
+            onClick={() => setIsOpen(false)}
+          >
             Manual
           </Link>
-          <Link href="/contact" className="block px-4 py-2 hover:bg-gray-100">
+          <Link
+            href="/contact"
+            className="block px-4 py-2 hover:bg-gray-100"
+            onClick={() => setIsOpen(false)}
+          >
             Contact
           </Link>
         </nav>
