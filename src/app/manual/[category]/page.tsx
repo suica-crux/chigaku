@@ -22,7 +22,10 @@ export default async function CategoryPage({
       categoryTitle = titleData;
     }
   } catch (error) {
-    console.error(`title found for ${category}`, error);
+    console.error(
+      `app/manual/[category]/page.tsx: title found for ${category}`,
+      error
+    );
   }
 
   // 🔥 `category/` 以下のフォルダ (トピック) を取得
@@ -43,14 +46,20 @@ export default async function CategoryPage({
               topicTitle = titleData;
             }
           } catch (error) {
-            console.error(`title not found for ${category}/${topicSlug}`, error);
+            console.error(
+              `app/manual/[category]/page.tsx: title not found for ${category}/${topicSlug}`,
+              error
+            );
           }
 
           return { slug: topicSlug, title: topicTitle };
         })
     );
   } catch (error) {
-    console.error(`Failed to read topics in ${category}`, error);
+    console.error(
+      `app/manual/[category]/page.tsx: Failed to read topics in ${category}`,
+      error
+    );
   }
 
   return (

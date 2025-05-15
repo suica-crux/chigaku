@@ -20,7 +20,9 @@ export default function Breadcrumbs() {
 
   const fullCrumbs = [{ label: 'ホーム', href: '/' }, ...crumbs];
 
-  if (segments.length === 0) return null;
+  if (segments.length === 0 || fullCrumbs.at(-1)?.label === 'エラー') {
+    return null;
+  }
 
   return (
     <nav className="text-sm text-gray-600 my-4" aria-label="Breadcrumbs">

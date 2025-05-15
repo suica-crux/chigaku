@@ -21,7 +21,10 @@ export default async function TopicPage({
       categoryTitle = titleData;
     }
   } catch (error) {
-    console.error(`title not found for category: ${category}`, error);
+    console.error(
+      `app/manual/[category]/[topic]/page.tsx: title not found for category: ${category}`,
+      error
+    );
   }
 
   try {
@@ -30,16 +33,22 @@ export default async function TopicPage({
       topicTitle = titleData;
     }
   } catch (error) {
-    console.error(`title not found for topic: ${topic}`, error);
+    console.error(
+      `app/manual/[category]/[topic]/page.tsx: title not found for topic: ${topic}`,
+      error
+    );
   }
 
   try {
     const contentModule = await import(
-      `/workspaces/chigaku/src/app/manual/${category}/${topic}/content.tsx`
+      `@/app/manual/${category}/${topic}/content.tsx`
     );
     ContentComponent = contentModule.default;
   } catch (error) {
-    console.error(`content.tsx not found for topic: ${topic}`, error);
+    console.error(
+      `app/manual/[category]/[topic]/page.tsx: content.tsx not found for topic: ${topic}`,
+      error
+    );
   }
 
   return (
