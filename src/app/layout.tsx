@@ -26,7 +26,7 @@ export default function RootLayout({
     <html lang="ja">
       <body className={`${mPlusRounded.className} antialiased`}>
         <Header />
-        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 gap-16 sm:p-20">
+        <div className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center min-h-screen p-8 pb-20 pt-20 gap-16 sm:p-20">
           <div className="justify-self-start">
             <Breadcrumbs />
           </div>
