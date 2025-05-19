@@ -10,7 +10,7 @@ export default async function CategoryPage({
   params: Promise<{ category: string }>;
 }) {
   const { category } = await Promise.resolve(params);
-  const categoryPath = path.join(process.cwd(), `src/app/manual/${category}`);
+  const categoryPath = path.join(process.cwd(), 'src/app/manual', category);
 
   let categoryTitle = category; // デフォルトはフォルダ名
   let topics: { slug: string; title: string }[] = [];
@@ -34,7 +34,7 @@ export default async function CategoryPage({
     const oderPath = path.join(categoryPath, 'oder.json');
     const oderJson = await fs.readFile(oderPath, 'utf-8');
     topicOder = JSON.parse(oderJson);
-  } catch (error) {
+  } catch {
     console.warn(
       `app/manual/[category]/page.tsx: oder.json not found in ${categoryPath}. Using alphabetical oder.`
     );
