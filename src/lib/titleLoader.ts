@@ -13,13 +13,11 @@ export function titleLoader(key: TitleKey): string | undefined {
     return undefined;
   }
 
-  const result = titles[key];
-
-  if (!result) {
+  if (!(key in titles)) {
     console.error(
       `lib/titleLoader.ts: キー "${key}" は titles.ts に存在しません`
     );
+    return undefined;
   }
-
-  return result;
+  return titles[key as keyof typeof titles];
 }

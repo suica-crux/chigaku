@@ -14,8 +14,9 @@ export default async function CategoryPage({
 
   let categoryTitle = category; // デフォルトはフォルダ名
   let topics: { slug: string; title: string }[] = [];
+  let topicOder: string[] = [];
 
-  // 🔥 カテゴリーの `title.json` を読み込む
+  // load category title
   try {
     const titleData = titleLoader(categoryTitle);
     if (titleData) {
@@ -23,38 +24,65 @@ export default async function CategoryPage({
     }
   } catch (error) {
     console.error(
-      `app/manual/[category]/page.tsx: title found for ${category}`,
+      `app/manual/[category]/page.tsx: title not found for ${category}`,
       error
     );
   }
 
-  // 🔥 `category/` 以下のフォルダ (トピック) を取得
+  // load oder.json
+  try {
+    const oderPath = path.join(categoryPath, 'oder.json');
+    const oderJson = await fs.readFile(oderPath, 'utf-8');
+    topicOder = JSON.parse(oderJson);
+  } catch (error) {
+    console.warn(
+      `app/manual/[category]/page.tsx: oder.json not found in ${categoryPath}. Using alphabetical oder.`
+    );
+  }
+
+  // category/ 以下のフォルダ (topic) を取得
   try {
     const entries = await fs.readdir(categoryPath, { withFileTypes: true });
 
-    topics = await Promise.all(
-      entries
-        .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
-        .map(async (entry) => {
-          const topicSlug = entry.name;
-
-          let topicTitle = topicSlug; // デフォルトはフォルダ名
-
-          try {
-            const titleData = titleLoader(topicTitle);
-            if (titleData) {
-              topicTitle = titleData;
-            }
-          } catch (error) {
-            console.error(
-              `app/manual/[category]/page.tsx: title not found for ${category}/${topicSlug}`,
-              error
-            );
-          }
-
-          return { slug: topicSlug, title: topicTitle };
-        })
+    const topicCandidates = entries.filter(
+      (entry) => entry.isDirectory() && !entry.name.startsWith('[')
     );
+
+    const loadedTopics = await Promise.all(
+      topicCandidates.map(async (entry) => {
+        const slug = entry.name;
+        let title = slug;
+
+        try {
+          const titleData = titleLoader(slug);
+          if (titleData) {
+            title = titleData;
+          }
+        } catch (error) {
+          console.error(
+            `app/manual/[category]/page.tsx: title not found for ${category}/${slug}`,
+            error
+          );
+        }
+
+        return { slug: slug, title: title };
+      })
+    );
+
+    if (topicOder.length > 0) {
+      const topicMap = Object.fromEntries(loadedTopics.map((t) => [t.slug, t]));
+      const orderedSlugs = new Set(topicOder);
+
+      const orderedTopics = topicOder
+        .map((slug) => topicMap[slug])
+        .filter(Boolean);
+
+      const rest = loadedTopics.filter((t) => !orderedSlugs.has(t.slug));
+
+      topics = [...orderedTopics, ...rest];
+    } else {
+      topics = loadedTopics;
+    }
   } catch (error) {
     console.error(
       `app/manual/[category]/page.tsx: Failed to read topics in ${category}`,
@@ -65,15 +93,19 @@ export default async function CategoryPage({
   return (
     <main className="p-6">
       <Heading title={categoryTitle} />
-      <ul className="space-y-2">
-        {topics.map(({ slug, title }) => (
-          <li key={slug}>
-            <Link href={`/manual/${category}/${slug}`} className="underline">
-              {title}
-            </Link>
-          </li>
-        ))}
-      </ul>
+      {topics.length === 0 ? (
+        <p>このカテゴリにはまだ記事がありません</p>
+      ) : (
+        <ul className="space-y-2">
+          {topics.map(({ slug, title }) => (
+            <li key={slug}>
+              <Link href={`/manual/${category}/${slug}`} className="underline">
+                {title}
+              </Link>
+            </li>
+          ))}
+        </ul>
+      )}
     </main>
   );
 }
