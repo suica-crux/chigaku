@@ -3,19 +3,33 @@ import path from 'path';
 import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
+import { Metadata } from 'next';
 
-export default async function CategoryPage(
-  props: {
-    params: Promise<{ category: string }>;
-  }
-) {
+export async function generateStaticParams() {
+  const manualPath = path.join(process.cwd(), 'src/data/manual');
+  const entries = await fs.readdir(manualPath, { withFileTypes: true });
+
+  return entries
+    .filter((entry) => entry.isDirectory())
+    .map((entry) => ({
+      category: entry.name,
+    }));
+}
+
+export const metadata: Metadata = {
+  title: 'マニュアル - 同志社高校地学部',
+};
+
+export default async function CategoryPage(props: {
+  params: Promise<{ category: string }>;
+}) {
   const params = await props.params;
   const { category } = params;
-  const categoryPath = path.join(process.cwd(), 'src/app/manual', category);
+  const categoryPath = path.join(process.cwd(), 'src/data/manual', category);
 
   let categoryTitle = category; // デフォルトはフォルダ名
   let topics: { slug: string; title: string }[] = [];
-  let topicOder: string[] = [];
+  let topicOrder: string[] = [];
 
   // load category title
   try {
@@ -30,14 +44,14 @@ export default async function CategoryPage(
     );
   }
 
-  // load oder.json
+  // load order.json
   try {
-    const oderPath = path.join(categoryPath, 'oder.json');
-    const oderJson = await fs.readFile(oderPath, 'utf-8');
-    topicOder = JSON.parse(oderJson);
+    const orderPath = path.join(categoryPath, 'order.json');
+    const orderJson = await fs.readFile(orderPath, 'utf-8');
+    topicOrder = JSON.parse(orderJson);
   } catch {
     console.warn(
-      `app/manual/[category]/page.tsx: oder.json not found in ${categoryPath}. Using alphabetical oder.`
+      `app/manual/[category]/page.tsx: order.json not found in ${categoryPath}. Using alphabetical order.`
     );
   }
 
@@ -45,9 +59,7 @@ export default async function CategoryPage(
   try {
     const entries = await fs.readdir(categoryPath, { withFileTypes: true });
 
-    const topicCandidates = entries.filter(
-      (entry) => entry.isDirectory() && !entry.name.startsWith('[')
-    );
+    const topicCandidates = entries.filter((entry) => entry.isDirectory());
 
     const loadedTopics = await Promise.all(
       topicCandidates.map(async (entry) => {
@@ -70,11 +82,11 @@ export default async function CategoryPage(
       })
     );
 
-    if (topicOder.length > 0) {
+    if (topicOrder.length > 0) {
       const topicMap = Object.fromEntries(loadedTopics.map((t) => [t.slug, t]));
-      const orderedSlugs = new Set(topicOder);
+      const orderedSlugs = new Set(topicOrder);
 
-      const orderedTopics = topicOder
+      const orderedTopics = topicOrder
         .map((slug) => topicMap[slug])
         .filter(Boolean);
 
@@ -99,7 +111,7 @@ export default async function CategoryPage(
       ) : (
         <ul className="space-y-2">
           {topics.map(({ slug, title }) => (
-            <li key={slug}>
+            <li key={slug} className="text-center text-lg">
               <Link href={`/manual/${category}/${slug}`} className="underline">
                 {title}
               </Link>
