@@ -10,7 +10,7 @@ export const metadata: Metadata = {
 };
 
 export default async function Manual() {
-  const manualPath = path.join(process.cwd(), 'src/app/manual');
+  const manualPath = path.join(process.cwd(), 'src/data/manual');
 
   let categories: { slug: string; title: string }[] = [];
 
@@ -18,7 +18,7 @@ export default async function Manual() {
     const entries = await fs.readdir(manualPath, { withFileTypes: true });
     categories = await Promise.all(
       entries
-        .filter((entry) => entry.isDirectory() && !entry.name.startsWith('['))
+        .filter((entry) => entry.isDirectory())
         .map(async (entry) => {
           const categorySlug = entry.name;
 
