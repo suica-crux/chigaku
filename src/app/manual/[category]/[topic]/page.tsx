@@ -1,15 +1,13 @@
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
 
-export default async function TopicPage({
-  params,
-}: {
-  params: Promise<{
-    category: string;
-    topic: string;
-  }>;
-}) {
-  const { category, topic } = await params;
+export default async function TopicPage(
+  props: {
+    params: Promise<{ category: string; topic: string }>;
+  }
+) {
+  const params = await props.params;
+  const { category, topic } = params;
 
   let categoryTitle = category;
   let topicTitle = topic;

@@ -4,12 +4,13 @@ import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
 
-export default async function CategoryPage({
-  params,
-}: {
-  params: Promise<{ category: string }>;
-}) {
-  const { category } = await Promise.resolve(params);
+export default async function CategoryPage(
+  props: {
+    params: Promise<{ category: string }>;
+  }
+) {
+  const params = await props.params;
+  const { category } = params;
   const categoryPath = path.join(process.cwd(), 'src/app/manual', category);
 
   let categoryTitle = category; // デフォルトはフォルダ名
