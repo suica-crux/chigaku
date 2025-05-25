@@ -7,9 +7,9 @@ import { titleLoader } from '@/lib/titleLoader';
 export default async function CategoryPage({
   params,
 }: {
-  params: Promise<{ category: string }>;
+  params: { category: string };
 }) {
-  const { category } = await Promise.resolve(params);
+  const { category } = params;
   const categoryPath = path.join(process.cwd(), 'src/app/manual', category);
 
   let categoryTitle = category; // デフォルトはフォルダ名
