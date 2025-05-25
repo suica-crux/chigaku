@@ -1,6 +1,5 @@
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
-import path from 'path';
 
 export default async function TopicPage(props: {
   params: Promise<{ category: string; topic: string }>;
@@ -38,7 +37,7 @@ export default async function TopicPage(props: {
 
   try {
     const contentModule = await import(
-      `@/app/manual/${category}/${topic}/content.tsx`
+      `@/data/manual/${category}/${topic}/content.tsx`
     );
     ContentComponent = contentModule.default;
   } catch (error) {

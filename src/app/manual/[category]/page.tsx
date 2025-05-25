@@ -111,7 +111,7 @@ export default async function CategoryPage(props: {
       ) : (
         <ul className="space-y-2">
           {topics.map(({ slug, title }) => (
-            <li key={slug}>
+            <li key={slug} className="text-center text-lg">
               <Link href={`/manual/${category}/${slug}`} className="underline">
                 {title}
               </Link>

@@ -46,10 +46,10 @@ export default async function Manual() {
 
   return (
     <div>
-      <Heading title="地学部各種マニュアル" />
+      <Heading title="地学部マニュアル" />
       <ul className="space-y-2">
         {categories.map(({ slug, title }) => (
-          <li key={slug}>
+          <li key={slug} className="text-center text-lg">
             <Link href={`/manual/${slug}`} className="underline">
               {title}
             </Link>
