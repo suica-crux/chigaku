@@ -6,10 +6,10 @@ export const titles: Record<string, string> = {
   seestar: 'seeStar',
   // manual/dome/
   prepare: '準備',
-  howto: '使い方',
+  howto: '主な使い方',
   quit: '片付け',
-  ladder: 'はしご',
-  finder: 'ファインダー',
-  lens: '接眼レンズ',
-  cover: 'カバー',
+  ladder: 'はしごの動かし方',
+  finder: 'ファインダーの合わせ方',
+  lens: '接眼レンズの替え方',
+  stair: '階段のふたの閉じ方',
 };
