@@ -2,19 +2,19 @@
 
 // import { forwardRef } from 'react';
 import Text from './Text';
-import ExternalLink from './ExternalLink';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-600 mt-16 py-8 flex flex-col items-center">
       <Text size="xl">各種リンク</Text>
       <div className="flex space-x-6">
-        <ExternalLink
+        {/* <ExternalLink
           href="https://instagram.com/doshisha_chigaku"
           customClass="hover:text-blue-500"
         >
           Instagram
-        </ExternalLink>
+        </ExternalLink> */}
+        <Text>リンク置こうね^^</Text>
       </div>
       <div className="text-center mt-4 text-sm">
         <Text colour="gray">

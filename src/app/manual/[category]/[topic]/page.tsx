@@ -1,5 +1,7 @@
 import Heading from '@/components/Heading';
-import { titleLoader } from '@/lib/titleLoader';
+import { titleLoader, getPages } from '@/lib/titleLoader';
+import Link from 'next/link';
+import { ChevronLeft, ChevronRight } from 'lucide-react';
 
 export default async function TopicPage(props: {
   params: Promise<{ category: string; topic: string }>;
@@ -47,6 +49,10 @@ export default async function TopicPage(props: {
     );
   }
 
+  const { previous, next } = getPages(topic);
+  const previousTitle = titleLoader(previous);
+  const nextTitle = titleLoader(next);
+
   return (
     <div>
       <Heading title={`${categoryTitle} - ${topicTitle}`} />
@@ -55,6 +61,32 @@ export default async function TopicPage(props: {
       ) : (
         <p>指定されたファイルが見つかりませんでした</p>
       )}
+
+      <div className="flex justify-between items-center mt-10">
+        {previous ? (
+          <Link
+            href={`/manual/${category}/${previous}`}
+            className="inline-flex items-center gap-2 px-4 py-2 text-gray-700 bg-gray-200 hover:bg-gray-300 rounded transition"
+          >
+            <ChevronLeft className="w-5 h-5" />
+            前のページ<br />({`${previousTitle}`})
+          </Link>
+        ) : (
+          <div />
+        )}
+
+        {next ? (
+          <Link
+            href={`/manual/${category}/${next}`}
+            className="inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded transition"
+          >
+            次のページ<br />({`${nextTitle}`})
+            <ChevronRight className="w-5 h-5" />
+          </Link>
+        ) : (
+          <div />
+        )}
+      </div>
     </div>
   );
 }
