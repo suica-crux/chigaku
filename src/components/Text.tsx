@@ -2,8 +2,8 @@
 
 type TextProperty = {
   children?: React.ReactNode;
-  size?: 'normal' | 'sm' | 'xl';
-  colour?: 'black' | 'gray' | 'blue' |'red' | 'white';
+  size?: 'normal' | 'sm' | 'xl' | 'lg';
+  colour?: 'black' | 'gray' | 'blue' | 'red' | 'white';
   className?: string;
 };
 
@@ -18,6 +18,8 @@ export default function Text({
     size === 'sm'
       ? 'text-sm'
       : size === 'xl'
+      ? 'text-2xl'
+      : size === 'lg'
       ? 'text-xl'
       : 'text-base';
   // 文字色

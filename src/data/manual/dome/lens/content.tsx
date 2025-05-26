@@ -1,10 +1,27 @@
-import Text from "@/components/Text";
+import Text from '@/components/Text';
+import Alert from '@/components/Alert';
+import Space from '@/components/Space';
 
 const Content: React.FC = () => {
   return (
-    <>
-      <Text>あ</Text>
-    </>
+    <div>
+      <Alert type="caution">
+        レンズを外す際は必ずレンズに手を添えてください。
+        <br />
+        取り外しても床や椅子には絶対に置かないでください。
+      </Alert>
+
+      <Text size="lg">Or40mmの場合</Text>
+      <Text>そのまま望遠鏡に付けられます。</Text>
+      <Space />
+
+      <Text size="lg">Or25, 18, HM25, その他の場合</Text>
+      <Text>
+        接続用の部品につなげてから望遠鏡に付けます。
+        <br />
+        この部品は小さなケースに入っています。
+      </Text>
+    </div>
   );
 };
 
