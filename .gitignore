@@ -45,3 +45,6 @@ next-env.d.ts
 
 *.code-profile
 .vscode/
+
+# local env files
+*.asc
