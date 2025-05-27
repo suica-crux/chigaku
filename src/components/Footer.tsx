@@ -1,20 +1,19 @@
 'use client';
 
-// import { forwardRef } from 'react';
 import Text from './Text';
+import Link from 'next/link';
 
 export default function Footer() {
   return (
     <footer className="bg-gray-100 text-gray-600 mt-16 py-8 flex flex-col items-center">
       <Text size="xl">各種リンク</Text>
       <div className="flex space-x-6">
-        {/* <ExternalLink
-          href="https://instagram.com/doshisha_chigaku"
-          customClass="hover:text-blue-500"
+        <Link
+          href="https://instagram.com/dhs_chigakubu"
+          target='_blank'
         >
           Instagram
-        </ExternalLink> */}
-        <Text>リンク置こうね^^</Text>
+        </Link>
       </div>
       <div className="text-center mt-4 text-sm">
         <Text colour="gray">
