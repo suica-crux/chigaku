@@ -32,7 +32,7 @@ export default function Alert({ children, type }: AlertProps) {
       className={`flex items-start gap-3 border ${borderColour} ${bgColour} ${textColour} p-4 my-4 rounded-lg`}
     >
       <Icon className={`w-6 h-6 mt-1 shrink-0 ${textColour}`} />
-      <p>{children}</p>
+      <div>{children}</div>
     </div>
   );
 }
