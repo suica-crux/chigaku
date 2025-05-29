@@ -97,6 +97,9 @@ export default function Header() {
         >
           Contact
         </Link>
+        <div className="block px-4 py-2">
+          <ThemeToggleButton />
+        </div>
       </nav>
     </header>
   );
