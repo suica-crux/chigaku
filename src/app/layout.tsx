@@ -4,6 +4,7 @@ import { M_PLUS_Rounded_1c } from 'next/font/google';
 import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
+import { Toaster } from 'react-hot-toast';
 
 const mPlusRounded = M_PLUS_Rounded_1c({
   weight: ['400', '700'],
@@ -32,6 +33,7 @@ export default function RootLayout({
           </div>
           <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
             {children}
+            <Toaster position='bottom-right' />
           </main>
         </div>
         <Footer />
