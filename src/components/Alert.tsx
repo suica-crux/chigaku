@@ -10,20 +10,20 @@ interface AlertProps {
 }
 
 export default function Alert({ children, type }: AlertProps) {
-  let borderColour = 'border-blue-500';
-  let bgColour = 'bg-blue-100';
-  let textColour = 'text-blue-800';
+  let borderColour = 'border-bdinfo';
+  let bgColour = 'bg-bginfo';
+  let textColour = 'text-txinfo';
   let Icon = InformationCircleIcon;
 
   if (type === 'warn') {
-    borderColour = 'border-red-500';
-    bgColour = 'bg-red-100';
-    textColour = 'text-red-800';
+    borderColour = 'border-bdwarn';
+    bgColour = 'bg-bgwarn';
+    textColour = 'text-txwarn';
     Icon = XCircleIcon;
   } else if (type === 'caution') {
-    borderColour = 'border-yellow-500';
-    bgColour = 'bg-yellow-100';
-    textColour = 'text-yellow-800';
+    borderColour = 'border-bdcaution';
+    bgColour = 'bg-bgcaution';
+    textColour = 'text-txcaution';
     Icon = ExclamationTriangleIcon;
   }
 

@@ -66,7 +66,7 @@ export default async function TopicPage(props: {
         {previous ? (
           <Link
             href={`/manual/${category}/${previous}`}
-            className="inline-flex items-center gap-2 px-4 py-2 text-gray-700 bg-gray-200 hover:bg-gray-300 rounded transition"
+            className="inline-flex items-center gap-2 px-4 py-2 text-foreground bg-subbg hover:bg-bghover rounded transition"
           >
             <ChevronLeft className="w-5 h-5" />
             前のページ<br />({`${previousTitle}`})

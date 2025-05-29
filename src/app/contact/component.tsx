@@ -46,7 +46,7 @@ export default function ContactPage() {
           placeholder="お名前"
           value={form.name}
           onChange={(e) => setForm({ ...form, name: e.target.value })}
-          className="w-full border px-4 py-2"
+          className="w-full border border-border px-4 py-2 bg-subbg"
           required
         />
         <input
@@ -54,21 +54,21 @@ export default function ContactPage() {
           placeholder="メールアドレス"
           value={form.email}
           onChange={(e) => setForm({ ...form, email: e.target.value })}
-          className="w-full border px-4 py-2"
+          className="w-full border border-border px-4 py-2 bg-subbg"
           required
         />
         <textarea
           placeholder="メッセージ"
           value={form.message}
           onChange={(e) => setForm({ ...form, message: e.target.value })}
-          className="w-full border px-4 py-2"
+          className="w-full border border-border px-4 py-2 bg-subbg"
           rows={5}
           required
         />
         <button
           type="submit"
           disabled={isSubmitting}
-          className="bg-blue-600 text-white px-4 py-2 rounded flex items-center justify-center gap-2"
+          className="bg-blue-500 text-white px-4 py-2 rounded flex items-center justify-center gap-2"
         >
           {isSubmitting && (
             <div className="w-4 h-4 border-2 border-white border-t-transparent animate-spin rounded-full"></div>
@@ -77,7 +77,7 @@ export default function ContactPage() {
         </button>
       </form>
       <p
-        className={`mt-4 text-sm text-gray-600 transition-opacity duration-300 ${
+        className={`mt-4 text-sm text-fgfade transition-opacity duration-300 ${
           result ? 'opacity-100' : 'opacity-0'
         }`}
       >

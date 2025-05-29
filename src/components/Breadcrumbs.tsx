@@ -25,13 +25,13 @@ export default function Breadcrumbs() {
   }
 
   return (
-    <nav className="text-sm text-gray-600 my-4" aria-label="Breadcrumbs">
+    <nav className="text-sm text-fgfade my-4" aria-label="Breadcrumbs">
       <ol className="list-reset flex space-x-2">
         {fullCrumbs.map((crumb, i) => (
           <li key={i} className="flex items-center">
-            {i > 0 && <SlashIcon className="h-4 w-4 text-gray-400" />}
+            {i > 0 && <SlashIcon className="h-4 w-4 text-fglight" />}
             {i < fullCrumbs.length - 1 ? (
-              <Link href={crumb.href} className="hover:underline text-blue-600">
+              <Link href={crumb.href} className="hover:underline text-blue-500">
                 {crumb.label}
               </Link>
             ) : (

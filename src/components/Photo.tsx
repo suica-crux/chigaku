@@ -22,7 +22,7 @@ export default function Photo({
         className="mx-auto rounded-lg shadow-lg"
       />
       {caption && (
-        <figcaption className="text-sm text-gray-500 mt-2">
+        <figcaption className="text-sm text-fgfade mt-2">
           {caption}
         </figcaption>
       )}
