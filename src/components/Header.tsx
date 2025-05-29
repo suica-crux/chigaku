@@ -3,6 +3,7 @@
 import { useState, useRef, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
+import ThemeToggleButton from './ThemeToggleButton';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -27,7 +28,7 @@ export default function Header() {
   }, [isOpen]);
 
   return (
-    <header className="fixed top-0 left-0 w-full bg-white shadow-md z-50">
+    <header className="fixed top-0 left-0 w-full bg-subbg shadow-md z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
         {/* ロゴ */}
         <Link href="/" className="text-xl font-bold">
@@ -35,15 +36,25 @@ export default function Header() {
         </Link>
 
         <nav className="hidden md:flex space-x-6">
-          <Link href="/about" className="hover:text-blue-700">
+          <Link
+            href="/about"
+            className="hover:text-blue-500 inline-flex items-center"
+          >
             About
           </Link>
-          <Link href="/manual" className="hover:text-blue-700">
+          <Link
+            href="/manual"
+            className="hover:text-blue-500 inline-flex items-center"
+          >
             Manual
           </Link>
-          <Link href="/contact" className="hover:text-blue-700">
+          <Link
+            href="/contact"
+            className="hover:text-blue-500 inline-flex items-center"
+          >
             Contact
           </Link>
+          <ThemeToggleButton />
         </nav>
 
         {/* for desktop */}
@@ -59,7 +70,7 @@ export default function Header() {
       {/* for mobile */}
       <nav
         ref={menuRef}
-        className={`md:hidden bg-white shadow-md absolute top-16 left-0 w-full py-2 transition-all duration-300 ease-in-out transform ${
+        className={`md:hidden bg-background shadow-md absolute top-16 left-0 w-full py-2 transition-all duration-300 ease-in-out transform ${
           isOpen
             ? 'opacity-100 translate-y-0 pointer-events-auto'
             : 'opacity-0 -translate-y-4 pointer-events-none'
@@ -67,25 +78,28 @@ export default function Header() {
       >
         <Link
           href="/about"
-          className="block px-4 py-2 hover:bg-gray-100"
+          className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
           About
         </Link>
         <Link
           href="/manual"
-          className="block px-4 py-2 hover:bg-gray-100"
+          className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
           Manual
         </Link>
         <Link
           href="/contact"
-          className="block px-4 py-2 hover:bg-gray-100"
+          className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
           Contact
         </Link>
+        <div className="block px-4 py-2">
+          <ThemeToggleButton />
+        </div>
       </nav>
     </header>
   );

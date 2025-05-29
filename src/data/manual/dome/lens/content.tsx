@@ -11,11 +11,11 @@ const Content: React.FC = () => {
         取り外しても床や椅子には絶対に置かないでください。
       </Alert>
 
-      <Text size="lg">Or40mmの場合</Text>
+      <Text size="lg">OR40mmの場合</Text>
       <Text>そのまま望遠鏡に付けられます。</Text>
       <Space />
 
-      <Text size="lg">Or25, 18, HM25, その他の場合</Text>
+      <Text size="lg">OR25mm, OR18mm, HM25, その他の場合</Text>
       <Text>
         接続用の部品につなげてから望遠鏡に付けます。
         <br />

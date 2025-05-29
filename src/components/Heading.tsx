@@ -15,12 +15,12 @@ export default function Heading({
     <div>
       <h1
         className={`text-5xl font-bold ${
-          warn ? 'text-red-500' : 'text-gray-900'
+          warn ? 'text-red-500' : 'text-foreground'
         }`}
       >
         {title}
       </h1>
-      <h2 className="mt-4 text-lg text-gray-700">{subtitle}</h2>
+      <h2 className="mt-4 text-lg text-foreground">{subtitle}</h2>
     </div>
   );
 }
