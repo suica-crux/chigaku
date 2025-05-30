@@ -1,7 +1,7 @@
 import Text from '@/components/Text';
 // import Link from 'next/link';
 import Space from '@/components/Space';
-import Photo from '@/components/Photo';
+import Picture from '@/components/Picture';
 
 const Content: React.FC = () => {
   return (
@@ -26,20 +26,14 @@ const Content: React.FC = () => {
         <br />
         下の黒いリモコンで微調整もできます。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748524989/IMG_3757_vfrzwy.jpg"
-        caption="望遠鏡の微調整リモコン"
-      />
+      <Picture pubId="IMG_3757_vfrzwy" caption="望遠鏡の微調整リモコン" />
       <Space />
 
       <Text size="lg">ピントを合わせる</Text>
       <Text>
         接眼レンズの上のねじを緩めた後に、ピント調節ねじを回してピントを合わせます。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748524986/IMG_3726_nso8bd.jpg"
-        caption="ピント調節ねじ"
-      />
+      <Picture pubId="IMG_3726_nso8bd" caption="ピント調節ねじ" />
     </div>
   );
 };

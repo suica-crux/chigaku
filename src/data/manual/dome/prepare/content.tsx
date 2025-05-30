@@ -1,7 +1,7 @@
 import Text from '@/components/Text';
 import Alert from '@/components/Alert';
 import Space from '@/components/Space';
-import Photo from '@/components/Photo';
+import Picture from '@/components/Picture';
 
 const Content: React.FC = () => {
   return (
@@ -15,10 +15,7 @@ const Content: React.FC = () => {
       <Text>
         万象館の3階にあるスリッパ置き場で、用意されているスリッパに履き替えます。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525015/IMG_3735_gbbeqd.jpg"
-        caption="スリッパ置き場"
-      />
+      <Picture pubId="IMG_3735_gbbeqd" caption="スリッパ置き場" />
       <Space />
 
       <Text size="lg">照明をつける</Text>
@@ -27,37 +24,28 @@ const Content: React.FC = () => {
         <br />
         ドームの照明のスイッチは展望室にもあります。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525058/IMG_3704_byjuxi.jpg"
-        caption="照明の電源"
-      />
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525010/IMG_3691_oiuopp.jpg"
+      <Picture pubId="IMG_3704_byjuxi" caption="照明の電源" />
+      <Picture
+        pubId="v1748525010/IMG_3691_oiuopp"
         caption="展望室側の照明スイッチ"
       />
       <Space />
 
       <Text size="lg">ブレーカーを上げる</Text>
       <Text>ボタンを押してブレーカーの扉を開けます</Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525064/IMG_3690_dgqcxy.jpg"
-        caption="ブレーカーの扉を開ける前"
-      />
+      <Picture pubId="IMG_3690_dgqcxy" caption="ブレーカーの扉を開ける前" />
       <Text>中のスイッチを上げます。</Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525045/IMG_3758_wznf4d.jpg"
+      <Picture
+        pubId="IMG_3758_wznf4d"
         caption="ブレーカーの扉を開けた後、ブレーカーを上げる前"
       />
       <Space />
 
       <Text size="lg">ドームを開ける</Text>
       <Text>鍵を開けて、ハンドルを反時計回りに回します。</Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525145/Snapshot_29-05-2025_13_26_ouh4e1.jpg"
-        caption="ドームの鍵"
-      />
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525631/Snapshot_29-05-2025_13_23_resized_uncfrm.png"
+      <Picture pubId="Snapshot_29-05-2025_13_26_ouh4e1" caption="ドームの鍵" />
+      <Picture
+        pubId="Snapshot_29-05-2025_13_23_resized_uncfrm.png"
         caption="このハンドルを回してドームを開けます"
       />
       <Space />
@@ -67,16 +55,13 @@ const Content: React.FC = () => {
       <Alert type="info">
         ボタンを押し続けるとモーターが焼き切れるかもしれないという言い伝えがあるので、5秒に1回ほど手を離しましょう。
       </Alert>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748524989/IMG_3703_qxiosz.jpg"
-        caption="ドームのリモコン"
-      />
+      <Picture pubId="IMG_3703_qxiosz" caption="ドームのリモコン" />
       <Space />
 
       <Text size="lg">望遠鏡のロックを外す</Text>
       <Text>望遠鏡の黒いハンドルを反時計回りに回します。</Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525023/IMG_3721_tdutcf.jpg"
+      <Picture
+        pubId="IMG_3721_tdutcf"
         caption="望遠鏡をロックしているハンドル"
       />
       <Alert type="caution">
@@ -93,10 +78,7 @@ const Content: React.FC = () => {
       <Alert type="warn">
         <span className="text-xl">絶対に</span>太陽に向けないこと
       </Alert>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525028/IMG_3724_k1wcgi.jpg"
-        caption="望遠鏡の蓋"
-      />
+      <Picture pubId="IMG_3724_k1wcgi" caption="望遠鏡の蓋" />
       <Space />
 
       <Text size="xl">赤道儀の電源を入れる</Text>
@@ -105,20 +87,14 @@ const Content: React.FC = () => {
         <br />
         上側のスイッチを、昼はSUN、夜はSTARに入れて、下側のPOWERスイッチを上げます。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525028/IMG_3724_k1wcgi.jpg"
-        caption="赤道儀の電源"
-      />
+      <Picture pubId="IMG_3724_k1wcgi" caption="赤道儀の電源" />
       <Space />
 
       <Text size="xl">照明を落とす</Text>
       <Text>
         照明は観測の邪魔なので落とします。展望室のスイッチが便利です。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748525010/IMG_3691_oiuopp.jpg"
-        caption="展望室側の照明スイッチ"
-      />
+      <Picture pubId="IMG_3691_oiuopp" caption="展望室側の照明スイッチ" />
     </div>
   );
 };

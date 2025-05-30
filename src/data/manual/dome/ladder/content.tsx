@@ -2,7 +2,7 @@ import Text from '@/components/Text';
 import Alert from '@/components/Alert';
 import Space from '@/components/Space';
 import Link from 'next/link';
-import Photo from '@/components/Photo';
+import Picture from '@/components/Picture';
 
 const Content: React.FC = () => {
   return (
@@ -30,7 +30,7 @@ const Content: React.FC = () => {
         はしごを動かすときは、望遠鏡のそばの出っ張りに気を付けてください。
         <br />
         はしごが乗り上げると、コードが断線する可能性があります。
-        <Photo src="https://res.cloudinary.com/do81opzly/image/upload/v1748525012/IMG_3705_qu4mgf.jpg" />
+        <Picture pubId="IMG_3705_qu4mgf" />
       </Alert>
       <Space />
 

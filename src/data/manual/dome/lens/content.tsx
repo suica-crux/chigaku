@@ -1,7 +1,7 @@
 import Text from '@/components/Text';
 import Alert from '@/components/Alert';
 import Space from '@/components/Space';
-import Photo from '@/components/Photo';
+import Picture from '@/components/Picture';
 
 const Content: React.FC = () => {
   return (
@@ -14,8 +14,8 @@ const Content: React.FC = () => {
 
       <Text size="lg">OR40mmの場合</Text>
       <Text>そのまま望遠鏡に付けることができます。</Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748524983/IMG_3740_u66vsv.jpg"
+      <Picture
+        pubId="IMG_3740_u66vsv"
         caption="OR40mmレンズを実際に装着した様子"
       />
       <Space />
@@ -26,10 +26,7 @@ const Content: React.FC = () => {
         <br />
         この部品は小さなケースに入っています。
       </Text>
-      <Photo
-        src="https://res.cloudinary.com/do81opzly/image/upload/v1748524990/IMG_3683_cvr9ye.jpg"
-        caption="OR25mmなどのレンズたち"
-      />
+      <Picture pubId="IMG_3683_cvr9ye" caption="OR25mmなどのレンズたち" />
     </div>
   );
 };
