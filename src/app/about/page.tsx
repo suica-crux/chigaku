@@ -1,6 +1,7 @@
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
 import Space from '@/components/Space';
+import Picture from '@/components/Picture';
 
 export default function AboutPage() {
   return (
@@ -17,6 +18,8 @@ export default function AboutPage() {
       <Text>
         夏休みには合宿も行います。去年度(2024年)には兵庫にある西はりま天文台に行き、施設を見学、観察しました。
       </Text>
+      <Picture pubId="IMG_2169_ngkfwh" caption="西はりま天文台見学の様子" />
+      <Picture pubId="IMG_2185_j1o8lj" caption="生野銀山見学の様子" />
       <Space />
       <Text size="lg" className="bold">星を見たい君たちへ。一緒に地学部で活動しませんか。</Text>
       <Space />
