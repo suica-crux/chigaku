@@ -40,19 +40,25 @@ export default function Header() {
             href="/about"
             className="hover:text-blue-500 inline-flex items-center"
           >
-            About
+            紹介
           </Link>
           <Link
             href="/manual"
             className="hover:text-blue-500 inline-flex items-center"
           >
-            Manual
+            マニュアル
+          </Link>
+          <Link
+            href="/caution"
+            className="hover:text-blue-500 inline-flex items-center"
+          >
+            注意事項
           </Link>
           <Link
             href="/contact"
             className="hover:text-blue-500 inline-flex items-center"
           >
-            Contact
+            お問い合わせ
           </Link>
           <ThemeToggleButton />
         </nav>
@@ -81,21 +87,28 @@ export default function Header() {
           className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
-          About
+          紹介
         </Link>
         <Link
           href="/manual"
           className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
-          Manual
+          マニュアル
+        </Link>
+        <Link
+          href="/caution"
+          className="block px-4 py-2"
+          onClick={() => setIsOpen(false)}
+        >
+          注意事項
         </Link>
         <Link
           href="/contact"
           className="block px-4 py-2"
           onClick={() => setIsOpen(false)}
         >
-          Contact
+          お問い合わせ
         </Link>
         <div className="block px-4 py-2">
           <ThemeToggleButton />

@@ -15,4 +15,5 @@ export const titles: Record<string, string> = {
   // other
   about: '地学部について',
   contact: 'お問い合わせ',
+  caution: '注意事項',
 };
