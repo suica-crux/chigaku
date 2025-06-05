@@ -11,6 +11,7 @@ export default function Home() {
     <div>
         <Heading title="地学部へようこそ" />
         <Text>地学部では、月に一度の夜間天体観測を行っています。</Text>
+        <Text>スマホの方は右上のメニュー(三本線)から各ページを開いてください</Text>
     </div>
   );
 }

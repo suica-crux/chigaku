@@ -64,12 +64,16 @@ export default function Header() {
         </nav>
 
         {/* for desktop */}
+        
         <button
-          className="md:hidden p-4 -m-2"
+          className="md:hidden p-4 -m-2 border rounded-md border-border"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
         >
-          {isOpen ? <X size={24} /> : <Menu size={24} />}
+          {isOpen ? <X size={24} /> : 
+          <Menu size={24} />
+          // <p>Menu</p>
+          }
         </button>
       </div>
 
