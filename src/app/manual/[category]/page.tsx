@@ -4,6 +4,7 @@ import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
 import { Metadata } from 'next';
+import ListItem from '@/components/ListItem';
 
 export async function generateStaticParams() {
   const manualPath = path.join(process.cwd(), 'src/data/manual');
@@ -111,11 +112,11 @@ export default async function CategoryPage(props: {
       ) : (
         <ul className="space-y-2">
           {topics.map(({ slug, title }) => (
-            <li key={slug} className="text-center text-lg">
-              <Link href={`/manual/${category}/${slug}`} className="underline">
+            <ListItem type='link' key={slug} className="text-center text-lg">
+              <Link href={`/manual/${category}/${slug}`}>
                 {title}
               </Link>
-            </li>
+            </ListItem>
           ))}
         </ul>
       )}

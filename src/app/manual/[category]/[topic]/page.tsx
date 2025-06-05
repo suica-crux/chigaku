@@ -69,7 +69,8 @@ export default async function TopicPage(props: {
             className="inline-flex items-center gap-2 px-4 py-2 text-foreground bg-subbg hover:bg-bghover rounded transition"
           >
             <ChevronLeft className="w-5 h-5" />
-            前のページ<br />({`${previousTitle}`})
+            前のページ
+            <br />({`${previousTitle}`})
           </Link>
         ) : (
           <div />
@@ -80,7 +81,8 @@ export default async function TopicPage(props: {
             href={`/manual/${category}/${next}`}
             className="inline-flex items-center gap-2 px-4 py-2 text-white bg-blue-600 hover:bg-blue-700 rounded transition"
           >
-            次のページ<br />({`${nextTitle}`})
+            次のページ
+            <br />({`${nextTitle}`})
             <ChevronRight className="w-5 h-5" />
           </Link>
         ) : (

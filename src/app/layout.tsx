@@ -6,6 +6,7 @@ import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from '../components/ThemeProvider';
+import BackToTop from '@/components/BackToTop';
 
 const mPlusRounded = M_PLUS_Rounded_1c({
   weight: ['400', '700'],
@@ -40,6 +41,7 @@ export default function RootLayout({
               {children}
               <Toaster position="bottom-right" />
             </main>
+            <BackToTop />
           </div>
           <Footer />
         </ThemeProvider>
