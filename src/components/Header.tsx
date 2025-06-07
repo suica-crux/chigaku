@@ -4,6 +4,7 @@ import { useState, useRef, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
 import ThemeToggleButton from './ThemeToggleButton';
+import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
@@ -30,9 +31,9 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 w-full bg-subbg shadow-md z-50">
       <div className="max-w-6xl mx-auto px-4 flex justify-between items-center h-16">
-        {/* ロゴ */}
-        <Link href="/" className="text-xl font-bold">
-          同志社高校地学部
+        <Image src='/favicon.ico' width={40} height={40} alt='logo' className='rounded' />  
+	<Link href='/' className='text-xl font-bold'>  
+	<span className='text-xl font-bold'>同志社高校地学部</span>
         </Link>
 
         <nav className="hidden md:flex space-x-6">
