@@ -29,7 +29,7 @@ export default function ContactPage() {
         setResult(`エラー: ${data.error}`);
         toast.error('サーバーエラー');
       }
-    } catch (err) {
+    } catch {
       setResult('送信失敗: サーバーに接続できませんでした。');
       toast.error('送信失敗');
     } finally {

@@ -11,7 +11,7 @@ type PictureProps = {
 	width?: number;
 	caption?: string;
 	className?: string;
-	variant?: Boolean;
+	variant?: boolean;
 };
 
 export default function Picture({

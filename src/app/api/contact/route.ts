@@ -57,8 +57,10 @@ export async function POST(req: Request) {
     });
 
     return NextResponse.json({ success: true });
-  } catch (err: any) {
-    console.error('APIエラー:', err);
+  } catch (err: unknown) {
+    if (err instanceof Error) console.error('APIエラー:', err);
+    else console.error('APIエラー: 未知のエラー ', err);
+
     return NextResponse.json({ error: '送信失敗' }, { status: 500 });
   }
 }
