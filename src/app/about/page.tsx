@@ -21,7 +21,9 @@ export default function AboutPage() {
       <Picture pubId="IMG_2169_ngkfwh" caption="西はりま天文台見学の様子" />
       <Picture pubId="IMG_2185_j1o8lj" caption="生野銀山見学の様子" />
       <Space />
-      <Text size="lg" className="bold">星を見たい君たちへ。一緒に地学部で活動しませんか。</Text>
+      <Text size="lg" className="bold">
+        星を見たい君たちへ。一緒に地学部で活動しませんか。
+      </Text>
       <Space />
       <Text size="sm">企画課より: 今後平日の活動も増やす予定です。随時更新</Text>
       {/* <Photo src="" /> */}

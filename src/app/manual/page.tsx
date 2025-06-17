@@ -30,19 +30,13 @@ export default async function Manual() {
               categoryTitle = titleData;
             }
           } catch (error) {
-            console.error(
-              `app/manual/page.tsx: Failed to read title in ${categorySlug}`,
-              error
-            );
+            console.error(`app/manual/page.tsx: Failed to read title in ${categorySlug}`, error);
           }
           return { slug: categorySlug, title: categoryTitle };
         })
     );
   } catch (error) {
-    console.error(
-      'app/manual/page.tsx: Failed to read manual directory',
-      error
-    );
+    console.error('app/manual/page.tsx: Failed to read manual directory', error);
   }
 
   return (
@@ -50,10 +44,8 @@ export default async function Manual() {
       <Heading title="地学部マニュアル" />
       <ul className="space-y-2">
         {categories.map(({ slug, title }) => (
-          <ListItem type='link' key={slug} className="text-center text-lg">
-            <Link href={`/manual/${slug}`}>
-              {title}
-            </Link>
+          <ListItem type="link" key={slug} className="text-center text-lg">
+            <Link href={`/manual/${slug}`}>{title}</Link>
           </ListItem>
         ))}
       </ul>

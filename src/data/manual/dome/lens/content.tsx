@@ -14,10 +14,7 @@ const Content: React.FC = () => {
 
       <Text size="lg">OR40mmの場合</Text>
       <Text>そのまま望遠鏡に付けることができます。</Text>
-      <Picture
-        pubId="IMG_3740_u66vsv"
-        caption="OR40mmレンズを実際に装着した様子"
-      />
+      <Picture pubId="IMG_3740_u66vsv" caption="OR40mmレンズを実際に装着した様子" />
       <Space />
 
       <Text size="lg">OR25mm, OR18mm, HM25, その他の場合</Text>

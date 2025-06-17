@@ -1,10 +1,7 @@
 import { z } from 'zod';
 
 export const ContactSchema = z.object({
-  name: z
-    .string()
-    .min(1, '名前は必須です')
-    .max(64, '名前は64文字以内で入力してください'),
+  name: z.string().min(1, '名前は必須です').max(64, '名前は64文字以内で入力してください'),
   email: z
     .string()
     .email('有効なメールアドレスを入力してください')

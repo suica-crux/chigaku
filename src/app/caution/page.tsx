@@ -20,14 +20,12 @@ export default function CuationPage() {
         なお、提出の際は直接顧問の先生または職員室の先生に手渡ししてください。
       </Alert>
       <Text size="lg">活動中の注意事項</Text>
-      <Alert type='caution'>
+      <Alert type="caution">
         活動中は万象館から外に出ることはできません。飲み物や食べ物は活動が始まるまでに各自で用意しておいてください。
         <br />
         食べ物のごみはごみ箱に捨てずに持ち帰ってください。
       </Alert>
-      <Alert type="caution">
-        屋上にある銀色の筒に触れないように気を付けてください。
-      </Alert>
+      <Alert type="caution">屋上にある銀色の筒に触れないように気を付けてください。</Alert>
     </div>
   );
 }

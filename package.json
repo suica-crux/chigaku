@@ -6,7 +6,8 @@
     "dev": "next dev",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint && prettier --check .",
+    "format": "prettier --write ."
   },
   "dependencies": {
     "@cloudinary/react": "^1.14.3",
@@ -31,6 +32,7 @@
     "eslint": "^9.29.0",
     "eslint-config-next": "15.3.3",
     "postcss": "^8.5.6",
+    "prettier": "^3.5.3",
     "tailwindcss": "^3.4.17",
     "ts-prune": "^0.10.3",
     "typescript": "^5.7.3",

@@ -44,10 +44,7 @@ export default function NotFoundChildren() {
         <Text>{countdown}&nbsp;秒後にトップーページに帰還します</Text>
         <Text>
           自動で戻らない場合:
-          <Link
-            href="/"
-            className="inline-block mt-2 text-blue-500 hover:text-blue-700"
-          >
+          <Link href="/" className="inline-block mt-2 text-blue-500 hover:text-blue-700">
             &nbsp;トップページに戻る
           </Link>
         </Text>

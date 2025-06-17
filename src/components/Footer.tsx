@@ -1,8 +1,8 @@
-"use client";
+'use client';
 
-import Text from "./Text";
-import Link from "next/link";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import Text from './Text';
+import Link from 'next/link';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 export default function Footer() {
   return (
@@ -15,9 +15,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="text-center mt-4 text-sm">
-        <Text colour="fade">
-          &copy; 2025 同志社高校地学部. All Rights Reserved.
-        </Text>
+        <Text colour="fade">&copy; 2025 同志社高校地学部. All Rights Reserved.</Text>
       </div>
     </footer>
   );

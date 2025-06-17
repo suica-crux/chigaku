@@ -11,17 +11,12 @@ export async function POST(req: Request) {
     const result = ContactSchema.safeParse(body);
 
     if (!result.success) {
-      return NextResponse.json(
-        { error: '入力内容に誤りがあります。' },
-        { status: 400 }
-      );
+      return NextResponse.json({ error: '入力内容に誤りがあります。' }, { status: 400 });
     }
 
     const { name, email, message } = result.data;
 
-    await db
-      .collection('contacts')
-      .add({ name, email, message, timestamp: new Date() });
+    await db.collection('contacts').add({ name, email, message, timestamp: new Date() });
 
     // メールを送信
     await resend.emails.send({
