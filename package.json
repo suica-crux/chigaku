@@ -12,17 +12,13 @@
     "@cloudinary/react": "^1.14.3",
     "@cloudinary/url-gen": "^1.21.0",
     "@heroicons/react": "^2.2.0",
-    "clsx": "^2.1.1",
     "firebase-admin": "^13.4.0",
     "lucide-react": "^0.516.0",
-    "marked": "^15.0.7",
     "next": "15.3.3",
-    "next-mdx-remote": "^5.0.0",
     "react": "^19.0.0",
     "react-dom": "^19.0.0",
     "react-hot-toast": "^2.5.2",
     "resend": "^4.6.0",
-    "tailwind-merge": "^3.3.1",
     "zod": "^3.25.67"
   },
   "devDependencies": {
@@ -31,10 +27,12 @@
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.8",
     "@types/react-dom": "^19.0.4",
+    "depcheck": "^1.4.7",
     "eslint": "^9.29.0",
     "eslint-config-next": "15.3.3",
     "postcss": "^8.5.6",
     "tailwindcss": "^3.4.17",
+    "ts-prune": "^0.10.3",
     "typescript": "^5.7.3",
     "webpack": "^5.99.8"
   }
