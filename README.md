@@ -48,6 +48,7 @@ Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/bui
 - [react-hot-toast](https://react-hot-oast.com/)
 
 devDependencies
+
 - [ESLint](https://eslint.org/)
 - [Prettier](https://prettier.io/)
 - [TypeScript](https://www.typescriptlang.org/)
@@ -57,12 +58,12 @@ devDependencies
 
 ## Commands
 
-| Command | Purpose |
-|---------|---------|
-| `pnpm dev` | Start the development server at https://localhost:3000 |
-| `pnpm build` | Create a production  build |
-| `pnpm start` | Launch the production server |
-| `pnpm lint` | Run ESLint, Prettier check, and TypeScript type check |
-| `pnpm format` | Format all files using Prettier |
+| Command       | Purpose                                                |
+| ------------- | ------------------------------------------------------ |
+| `pnpm dev`    | Start the development server at https://localhost:3000 |
+| `pnpm build`  | Create a production build                              |
+| `pnpm start`  | Launch the production server                           |
+| `pnpm lint`   | Run ESLint, Prettier check, and TypeScript type check  |
+| `pnpm format` | Format all files using Prettier                        |
 
 > **Note:** The build process requires all lint, formatting, and type checks to pass.
