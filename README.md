@@ -34,3 +34,36 @@ You can check out [the Next.js GitHub repository](https://github.com/vercel/next
 The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
 
 Check out our [Next.js deployment documentation](https://nextjs.org/docs/app/building-your-application/deploying) for more details.
+
+## Libraries
+
+- [Next.js 15](https://nextjs.org/)
+- [React 19](https://react.dev/)
+- [Tailwind CSS](https://tailwindcss.com/)
+- [Clooudinary](https://cloudinary.com/)
+- [Firebase Admin SDK](https://firebase.google.com/docs/admin/setup)
+- [Resend](https://resend.com/)
+- [Zod](https://zod.dev/)
+- [Lucide React](https://lucide.dev/)
+- [react-hot-toast](https://react-hot-oast.com/)
+
+devDependencies
+
+- [ESLint](https://eslint.org/)
+- [Prettier](https://prettier.io/)
+- [TypeScript](https://www.typescriptlang.org/)
+- [depcheck](https://www.npmjs.com/package/depcheck)
+- [ts-prune](https://github.com/nadeesha/ts-prune)
+- [Tailwind Typography](https://tailwindcss.com/docs/typography-plugin)
+
+## Commands
+
+| Command       | Purpose                                                |
+| ------------- | ------------------------------------------------------ |
+| `pnpm dev`    | Start the development server at https://localhost:3000 |
+| `pnpm build`  | Create a production build                              |
+| `pnpm start`  | Launch the production server                           |
+| `pnpm lint`   | Run ESLint, Prettier check, and TypeScript type check  |
+| `pnpm format` | Format all files using Prettier                        |
+
+> **Note:** The build process requires all lint, formatting, and type checks to pass.
