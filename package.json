@@ -24,7 +24,6 @@
   },
   "devDependencies": {
     "@eslint/eslintrc": "^3.2.0",
-    "@tailwindcss/postcss": "^4.1.10",
     "@tailwindcss/typography": "^0.5.16",
     "@types/node": "^24.0.3",
     "@types/react": "^19.1.8",
@@ -34,7 +33,7 @@
     "eslint-config-next": "15.3.3",
     "postcss": "^8.5.6",
     "prettier": "^3.5.3",
-    "tailwindcss": "^4.1.10",
+    "tailwindcss": "^3.4.17",
     "ts-prune": "^0.10.3",
     "typescript": "^5.7.3",
     "webpack": "^5.99.8"
