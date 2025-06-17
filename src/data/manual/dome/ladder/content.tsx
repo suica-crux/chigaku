@@ -10,8 +10,7 @@ const Content: React.FC = () => {
       <Space size="lg" />
       <Text>
         比較的低い場所にある星や、比叡山などで練習するときははしごを使って観測すると便利です
-        {/* <span className="text-sm">(というかそうしないと観測できないです)</span> */}
-        。
+        {/* <span className="text-sm">(というかそうしないと観測できないです)</span> */}。
       </Text>
       <Text>
         ペダルが下がっていたらその車輪はロックされていて動きません。
@@ -36,10 +35,7 @@ const Content: React.FC = () => {
 
       <Text>
         階段がある方角にはしごを動かす際については、
-        <Link
-          href="/manual/dome/stairs"
-          className="text-blue-500 hover:text-color-600 underline"
-        >
+        <Link href="/manual/dome/stairs" className="text-blue-500 hover:text-color-600 underline">
           こちら
         </Link>
         にも目を通しておいてください。

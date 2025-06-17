@@ -38,9 +38,7 @@ export default async function TopicPage(props: {
   }
 
   try {
-    const contentModule = await import(
-      `@/data/manual/${category}/${topic}/content.tsx`
-    );
+    const contentModule = await import(`@/data/manual/${category}/${topic}/content.tsx`);
     ContentComponent = contentModule.default;
   } catch (error) {
     console.error(
@@ -56,11 +54,7 @@ export default async function TopicPage(props: {
   return (
     <div>
       <Heading title={`${categoryTitle} - ${topicTitle}`} />
-      {ContentComponent ? (
-        <ContentComponent />
-      ) : (
-        <p>指定されたファイルが見つかりませんでした</p>
-      )}
+      {ContentComponent ? <ContentComponent /> : <p>指定されたファイルが見つかりませんでした</p>}
 
       <div className="flex justify-between items-center mt-10">
         {previous ? (

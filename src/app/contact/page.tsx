@@ -1,9 +1,9 @@
-import Link from "next/link";
-import Heading from "@/components/Heading";
-import Text from "@/components/Text";
-import ContactComp from "./component";
-import ListItem from "@/components/ListItem";
-import { ArrowTopRightOnSquareIcon } from "@heroicons/react/24/solid";
+import Link from 'next/link';
+import Heading from '@/components/Heading';
+import Text from '@/components/Text';
+import ContactComp from './component';
+import ListItem from '@/components/ListItem';
+import { ArrowTopRightOnSquareIcon } from '@heroicons/react/24/solid';
 
 export default function ContactPage() {
   return (
@@ -19,9 +19,7 @@ export default function ContactPage() {
           </Link>
           &nbsp;にDMを送りつける
         </ListItem>
-        <ListItem recommended>
-          謎の化石を持って3Dまたは2Cの教室に飛び込む
-        </ListItem>
+        <ListItem recommended>謎の化石を持って3Dまたは2Cの教室に飛び込む</ListItem>
       </ul>
       <ContactComp />
     </div>

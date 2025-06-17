@@ -30,9 +30,7 @@ const Content: React.FC = () => {
       <Space />
 
       <Text size="lg">ピントを合わせる</Text>
-      <Text>
-        接眼レンズの上のねじを緩めた後に、ピント調節ねじを回してピントを合わせます。
-      </Text>
+      <Text>接眼レンズの上のねじを緩めた後に、ピント調節ねじを回してピントを合わせます。</Text>
       <Picture pubId="IMG_3726_nso8bd" caption="ピント調節ねじ" />
     </div>
   );

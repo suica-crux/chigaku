@@ -3,20 +3,13 @@ import order from '@/data/manual/dome/order.json';
 
 export function titleLoader(key: unknown): string | undefined {
   if (typeof key !== 'string' || !key) return undefined;
-  if (
-    key.startsWith('[') ||
-    key.startsWith('.') ||
-    key.startsWith('$') ||
-    !(key in titles)
-  ) {
+  if (key.startsWith('[') || key.startsWith('.') || key.startsWith('$') || !(key in titles)) {
     if (!(key in titles)) {
-      console.error(
-        `lib/titleLoader.ts: キー "${key}" は titles.ts に存在しません`
-      );
+      console.error(`lib/titleLoader.ts: キー "${key}" は titles.ts に存在しません`);
     }
     return undefined;
   }
-  
+
   return titles[key as keyof typeof titles];
 }
 

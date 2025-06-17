@@ -21,9 +21,7 @@ export const metadata: Metadata = {
   title: 'マニュアル - 同志社高校地学部',
 };
 
-export default async function CategoryPage(props: {
-  params: Promise<{ category: string }>;
-}) {
+export default async function CategoryPage(props: { params: Promise<{ category: string }> }) {
   const params = await props.params;
   const { category } = params;
   const categoryPath = path.join(process.cwd(), 'src/data/manual', category);
@@ -39,10 +37,7 @@ export default async function CategoryPage(props: {
       categoryTitle = titleData;
     }
   } catch (error) {
-    console.error(
-      `app/manual/[category]/page.tsx: title not found for ${category}`,
-      error
-    );
+    console.error(`app/manual/[category]/page.tsx: title not found for ${category}`, error);
   }
 
   // load order.json
@@ -87,9 +82,7 @@ export default async function CategoryPage(props: {
       const topicMap = Object.fromEntries(loadedTopics.map((t) => [t.slug, t]));
       const orderedSlugs = new Set(topicOrder);
 
-      const orderedTopics = topicOrder
-        .map((slug) => topicMap[slug])
-        .filter(Boolean);
+      const orderedTopics = topicOrder.map((slug) => topicMap[slug]).filter(Boolean);
 
       const rest = loadedTopics.filter((t) => !orderedSlugs.has(t.slug));
 
@@ -98,10 +91,7 @@ export default async function CategoryPage(props: {
       topics = loadedTopics;
     }
   } catch (error) {
-    console.error(
-      `app/manual/[category]/page.tsx: Failed to read topics in ${category}`,
-      error
-    );
+    console.error(`app/manual/[category]/page.tsx: Failed to read topics in ${category}`, error);
   }
 
   return (
@@ -112,10 +102,8 @@ export default async function CategoryPage(props: {
       ) : (
         <ul className="space-y-2">
           {topics.map(({ slug, title }) => (
-            <ListItem type='link' key={slug} className="text-center text-lg">
-              <Link href={`/manual/${category}/${slug}`}>
-                {title}
-              </Link>
+            <ListItem type="link" key={slug} className="text-center text-lg">
+              <Link href={`/manual/${category}/${slug}`}>{title}</Link>
             </ListItem>
           ))}
         </ul>
