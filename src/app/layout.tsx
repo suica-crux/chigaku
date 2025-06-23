@@ -7,6 +7,7 @@ import Breadcrumbs from '@/components/Breadcrumbs';
 import { Toaster } from 'react-hot-toast';
 import { ThemeProvider } from '../components/ThemeProvider';
 import BackToTop from '@/components/BackToTop';
+import PwaInstallButton from '@/components/PwaInstallButton';
 
 const mPlusRounded = M_PLUS_Rounded_1c({
   weight: ['400', '700'],
@@ -49,6 +50,7 @@ export default function RootLayout({
             </main>
             <BackToTop />
           </div>
+          <PwaInstallButton />
           <Footer />
         </ThemeProvider>
       </body>
