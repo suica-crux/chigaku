@@ -48,3 +48,6 @@ next-env.d.ts
 
 # local env files
 *.asc
+
+public/sw.js
+public/workbox-*.js
