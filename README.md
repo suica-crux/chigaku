@@ -65,5 +65,3 @@ devDependencies
 | `pnpm start`  | Launch the production server                           |
 | `pnpm lint`   | Run ESLint, Prettier check, and TypeScript type check  |
 | `pnpm format` | Format all files using Prettier                        |
-
-> **Note:** The build process requires all lint, formatting, and type checks to pass.
