@@ -1,12 +1,10 @@
 import Heading from '@/components/Heading';
 import { dateFormatter } from '@/lib/dateFormatter';
 
-export default async function TopicPage(props: {
-  params: Promise<{ schedule: string }>;
-}) {
-  const {schedule} = await props.params;
+export default async function TopicPage(props: { params: Promise<{ schedule: string }> }) {
+  const { schedule } = await props.params;
   const plan = schedule;
-  console.log(`plan: ${plan}`)
+  console.log(`plan: ${plan}`);
 
   let ContentComponent: React.ComponentType | null = null;
 
@@ -14,17 +12,14 @@ export default async function TopicPage(props: {
     const contentModule = await import(`@/data/schedule/${plan}/content.tsx`);
     ContentComponent = contentModule.default;
   } catch (error) {
-    console.error(
-      `app/manual/[schedule]/page.tsx: content.tsx not found for plan: ${plan}`,
-      error
-    );
+    console.error(`app/manual/[schedule]/page.tsx: content.tsx not found for plan: ${plan}`, error);
   }
 
-  let date
+  let date;
   try {
-    date = dateFormatter(plan)
+    date = dateFormatter(plan);
   } catch {
-    console.error(`app/manual/[schedule]/page.tsx: 日付形式が非対応です`)
+    console.error(`app/manual/[schedule]/page.tsx: 日付形式が非対応です`);
   }
 
   return (

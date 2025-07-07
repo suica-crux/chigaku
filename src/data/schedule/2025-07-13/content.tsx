@@ -1,8 +1,8 @@
-import Text from "@/components/Text"
-import React from "react"
+import Text from '@/components/Text';
+import React from 'react';
 
 const Content: React.FC = () => {
-  return <Text>わー</Text>
-}
+  return <Text>わー</Text>;
+};
 
-export default Content
+export default Content;

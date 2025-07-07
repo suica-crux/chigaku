@@ -6,13 +6,13 @@ import { useState, useEffect } from 'react';
 
 export default function OfflineAlert() {
   const isOnline = useOnlineStatus();
-  const [mounted, setMounted] = useState(false)
+  const [mounted, setMounted] = useState(false);
 
   useEffect(() => {
-    setMounted(true)
-  }, [])
+    setMounted(true);
+  }, []);
 
-  if (!mounted) return null
+  if (!mounted) return null;
 
   return <div>{!isOnline && <Alert type="caution">オフラインです</Alert>}</div>;
 }
