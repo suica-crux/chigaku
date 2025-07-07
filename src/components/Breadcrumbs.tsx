@@ -9,6 +9,10 @@ export default function Breadcrumbs() {
   const pathname = usePathname();
   const segments = pathname.split('/').filter(Boolean);
 
+  if (segments.length === 0 || segments.includes('schedule')) {
+    return null;
+  }
+
   const crumbs = segments.map((segment, index) => {
     const decoded = decodeURIComponent(segment);
     const label = titleLoader(decoded) || titleLoader('_not-found');
@@ -20,7 +24,7 @@ export default function Breadcrumbs() {
 
   const fullCrumbs = [{ label: 'ホーム', href: '/' }, ...crumbs];
 
-  if (segments.length === 0 || fullCrumbs.at(-1)?.label === 'エラー') {
+  if (fullCrumbs.at(-1)?.label === 'エラー') {
     return null;
   }
 
