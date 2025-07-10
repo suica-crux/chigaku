@@ -38,6 +38,6 @@
     "tailwindcss": "^3.4.17",
     "ts-prune": "^0.10.3",
     "typescript": "^5.7.3",
-    "webpack": "^5.99.8"
+    "webpack": "^5.100.0"
   }
 }
