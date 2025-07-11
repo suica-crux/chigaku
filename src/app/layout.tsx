@@ -37,33 +37,33 @@ export default function RootLayout({
         lang="ja"
         className={`${mPlusRounded.className} antialiased transition-colors duration-300`}
       >
-          <Header />
-          <div
-            className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center
+        <Header />
+        <div
+          className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center
                 min-h-screen p-8 pb-20 pt-20 gap-16 sm:p-20"
-          >
-            {/* row-1 : パンくず＋オフラインアラート  */}
-            <div className="flex flex-col items-center w-full gap-2">
-              {/* ↓ 左寄せしたいものは “self-start” で左に寄せる */}
-              <div className="self-start">
-                <Breadcrumbs />
-              </div>
-
-              {/* ↓ アラートは幅100%でテキスト中央揃え  */}
-              <OfflineAlert />
+        >
+          {/* row-1 : パンくず＋オフラインアラート  */}
+          <div className="flex flex-col items-center w-full gap-2">
+            {/* ↓ 左寄せしたいものは “self-start” で左に寄せる */}
+            <div className="self-start">
+              <Breadcrumbs />
             </div>
 
-            {/* row-2 : メイン */}
-            <main className="flex flex-col items-center row-start-2 gap-8 sm:items-start">
-              {children}
-              <Toaster position="bottom-right" />
-            </main>
-
-            {/* row-3 : 下部アイテム */}
-            <BackToTop />
+            {/* ↓ アラートは幅100%でテキスト中央揃え  */}
+            <OfflineAlert />
           </div>
 
-          <Footer />
+          {/* row-2 : メイン */}
+          <main className="flex flex-col items-center row-start-2 gap-8 sm:items-start">
+            {children}
+            <Toaster position="bottom-right" />
+          </main>
+
+          {/* row-3 : 下部アイテム */}
+          <BackToTop />
+        </div>
+
+        <Footer />
       </body>
     </html>
   );

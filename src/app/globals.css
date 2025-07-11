@@ -1,26 +1,26 @@
-@import "tailwindcss";
+@import 'tailwindcss';
 
 @theme {
   /* ベースカラー */
   --color-background: #1e1e1e;
-  --color-subbg:      #101010;
-  --color-bghover:    #333333;
+  --color-subbg: #101010;
+  --color-bghover: #333333;
   --color-foreground: #ffffff;
-  --color-fgfade:     #aaaaaa;
-  --color-border:     #4b5563;
+  --color-fgfade: #aaaaaa;
+  --color-border: #4b5563;
 
   /* アラート系 */
-  --color-bdinfo:     #60a5fa;  
-  --color-bginfo:     #93c5fd;  
-  --color-txinfo:     #1e40af;  
+  --color-bdinfo: #60a5fa;
+  --color-bginfo: #93c5fd;
+  --color-txinfo: #1e40af;
 
-  --color-bdwarn:     #f87171;  
-  --color-bgwarn:     #fca5a5;  
-  --color-txwarn:     #991b1b;  
+  --color-bdwarn: #f87171;
+  --color-bgwarn: #fca5a5;
+  --color-txwarn: #991b1b;
 
-  --color-bdcaution:  #fde047;  
-  --color-bgcaution:  #fef08a;  
-  --color-txcaution:  #92400e;  
+  --color-bdcaution: #fde047;
+  --color-bgcaution: #fef08a;
+  --color-txcaution: #92400e;
 }
 
 body {
