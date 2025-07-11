@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Toaster } from 'react-hot-toast';
-import { ThemeProvider } from '../components/ThemeProvider';
 import BackToTop from '@/components/BackToTop';
 import OfflineAlert from '@/components/OfflineAlert';
 
@@ -38,14 +37,13 @@ export default function RootLayout({
         lang="ja"
         className={`${mPlusRounded.className} antialiased transition-colors duration-300`}
       >
-        <ThemeProvider>
           <Header />
           <div
             className="grid grid-rows-[20px_1fr_20px] items-center justify-items-center
                 min-h-screen p-8 pb-20 pt-20 gap-16 sm:p-20"
           >
             {/* row-1 : パンくず＋オフラインアラート  */}
-            <div className="w-full flex flex-col items-center gap-2">
+            <div className="flex flex-col items-center w-full gap-2">
               {/* ↓ 左寄せしたいものは “self-start” で左に寄せる */}
               <div className="self-start">
                 <Breadcrumbs />
@@ -56,7 +54,7 @@ export default function RootLayout({
             </div>
 
             {/* row-2 : メイン */}
-            <main className="flex flex-col gap-8 row-start-2 items-center sm:items-start">
+            <main className="flex flex-col items-center row-start-2 gap-8 sm:items-start">
               {children}
               <Toaster position="bottom-right" />
             </main>
@@ -66,7 +64,6 @@ export default function RootLayout({
           </div>
 
           <Footer />
-        </ThemeProvider>
       </body>
     </html>
   );
