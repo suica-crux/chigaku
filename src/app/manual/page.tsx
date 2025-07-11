@@ -44,7 +44,7 @@ export default async function Manual() {
       <Heading title="地学部マニュアル" />
       <ul className="space-y-2">
         {categories.map(({ slug, title }) => (
-          <ListItem type="link" key={slug} className="text-center text-lg">
+          <ListItem type="link" key={slug} slug={slug} className="text-lg text-center">
             <Link href={`/manual/${slug}`}>{title}</Link>
           </ListItem>
         ))}

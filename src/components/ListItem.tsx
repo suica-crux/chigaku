@@ -1,6 +1,6 @@
 type ListItemProps = {
-  children?: React.ReactNode;
-  key?: string;
+  children: React.ReactNode;
+  slug?: string;
   className?: string;
   recommended?: boolean;
   type?: 'link';
@@ -9,13 +9,13 @@ type ListItemProps = {
 export default function ListItem({
   children,
   className = '',
-  key,
+  slug = '',
   recommended = false,
   type,
 }: ListItemProps) {
   return (
     <li
-      key={key}
+      data-slug={slug}
       className={`list-item ${className} ${type === 'link' ? 'text-3xl p-1 border rounded w-fit border-border mx-auto' : ''}`}
     >
       {children}

@@ -102,7 +102,7 @@ export default async function CategoryPage(props: { params: Promise<{ category: 
       ) : (
         <ul className="space-y-2">
           {topics.map(({ slug, title }) => (
-            <ListItem type="link" key={slug} className="text-center text-lg">
+            <ListItem type="link" key={slug} slug={slug} className="text-lg text-center">
               <Link href={`/manual/${category}/${slug}`}>{title}</Link>
             </ListItem>
           ))}

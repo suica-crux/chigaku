@@ -1,46 +1,29 @@
-@tailwind base;
-@tailwind components;
-@tailwind utilities;
+@import 'tailwindcss';
 
-:root {
-  --background: #ffffff;
-  --subbg: #ededed;
-  --bghover: #d4d4d4;
-  --foreground: #171717;
-  --fgfade: #999999;
-  --border: #d1d5db;
-  /* Alert */
-  --bdinfo: #3b82f6;
-  --bginfo: #dbeafe;
-  --txinfo: #1e3a8a;
-  --bdwarn: #ef4444;
-  --bgwarn: #fee2e2;
-  --txwarn: #991b1b;
-  --bdcaution: #eab308;
-  --bgcaution: #fef9c3;
-  --txcaution: #78350f;
-}
+@theme {
+  /* ベースカラー */
+  --color-background: #1e1e1e;
+  --color-subbg: #101010;
+  --color-bghover: #333333;
+  --color-foreground: #ffffff;
+  --color-fgfade: #aaaaaa;
+  --color-border: #4b5563;
 
-.dark {
-  --background: #1e1e1e;
-  --subbg: #000000;
-  --bghover: #333333;
-  --foreground: #ffffff;
-  --fgfade: #aaaaaa;
-  --border: #4b5563;
-  /* Alert */
-  --bdinfo: #60a5fa;
-  --bginfo: #93c5fd;
-  --txinfo: #1e40af;
-  --bdwarn: #f87171;
-  --bgwarn: #fca5a5;
-  --txwarn: #991b1b;
-  --bdcaution: #fde047;
-  --bgcaution: #fef08a;
-  --txcaution: #92400e;
+  /* アラート系 */
+  --color-bdinfo: #60a5fa;
+  --color-bginfo: #93c5fd;
+  --color-txinfo: #1e40af;
+
+  --color-bdwarn: #f87171;
+  --color-bgwarn: #fca5a5;
+  --color-txwarn: #991b1b;
+
+  --color-bdcaution: #fde047;
+  --color-bgcaution: #fef08a;
+  --color-txcaution: #92400e;
 }
 
 body {
-  color: var(--foreground);
-  background: var(--background);
+  color: var(--color-foreground);
+  background: var(--color-background);
 }
