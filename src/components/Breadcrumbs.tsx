@@ -9,7 +9,9 @@ export default function Breadcrumbs() {
   const pathname = usePathname();
   const segments = pathname.split('/').filter(Boolean);
 
-  if (segments.length === 0 || segments.includes('schedule')) {
+  if (segments.length === 0
+    // || segments.includes('schedule')
+  ) {
     return null;
   }
 

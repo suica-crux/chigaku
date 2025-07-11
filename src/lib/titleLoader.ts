@@ -1,8 +1,11 @@
 import { titles } from '@/data/titles';
 import order from '@/data/manual/dome/order.json';
+import { dateFormatter } from './dateFormatter';
 
 export function titleLoader(key: unknown): string | undefined {
   if (typeof key !== 'string' || !key) return undefined;
+
+  if (key.startsWith('2')) return dateFormatter(key);
   if (key.startsWith('[') || key.startsWith('.') || key.startsWith('$') || !(key in titles)) {
     if (!(key in titles)) {
       console.error(`lib/titleLoader.ts: キー "${key}" は titles.ts に存在しません`);
