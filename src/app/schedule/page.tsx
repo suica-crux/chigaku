@@ -18,8 +18,8 @@ const Content: React.FC = () => {
         year={2025}
         month={7}
         dayInfo={{
-          13: { room: 'b202', time: '19:00-24:00' },
-          14: { room: 'b202', time: '0:00-6:00' },
+          12: { room: 'b202', time: '19:00-24:00' },
+          13: { room: 'b202', time: '0:00-6:00' },
           17: { room: 's109', time: '9:30-13:00' },
           22: { room: 's109', time: '12:00-15:30' },
           25: { room: 's109', time: '9:30-13:00' },
