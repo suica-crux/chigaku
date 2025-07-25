@@ -7,10 +7,7 @@ export default async function TopicPage(props: { params: Promise<{ forms: string
     const contentModule = await import(`@/data/forms/${title}/content.tsx`);
     ContentComponent = contentModule.default;
   } catch (error) {
-    console.error(
-      `app/[forms]/page.tsx: content.tsx が見つかりません title=${title}`,
-      error
-    );
+    console.error(`app/[forms]/page.tsx: content.tsx が見つかりません title=${title}`, error);
   }
 
   return (
