@@ -14,6 +14,8 @@ export const titles: Record<string, string> = {
   stair: '階段のふたの閉じ方',
   // schedule/
   schedule: '予定',
+  // forms
+  // contest: 'コンテスト',
   // other
   about: '地学部について',
   contact: 'お問い合わせ',
