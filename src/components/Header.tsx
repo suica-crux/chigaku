@@ -45,9 +45,9 @@ export default function Header() {
 
         <nav className="hidden space-x-6 md:flex">
           {links.map(({ href, label }) => (
-          <Link key={href} href={href} className="inline-flex items-center hover:text-blue-500">
-            {label}
-          </Link>
+            <Link key={href} href={href} className="inline-flex items-center hover:text-blue-500">
+              {label}
+            </Link>
           ))}
         </nav>
 
@@ -57,10 +57,8 @@ export default function Header() {
           className="p-4 -m-2 border rounded-md md:hidden border-border"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
-          >
-          {
-            isOpen ? <X size={24} /> : <Menu size={24} />
-          }
+        >
+          {isOpen ? <X size={24} /> : <Menu size={24} />}
         </button>
       </div>
 
@@ -70,14 +68,14 @@ export default function Header() {
         ref={menuRef}
         className={`md:hidden bg-background shadow-md absolute top-16 left-0 w-full py-2 transition-all duration-300 ease-in-out transform ${
           isOpen
-          ? 'opacity-100 translate-y-0 pointer-events-auto'
-          : 'opacity-0 -translate-y-4 pointer-events-none'
-          }`}
-          >
+            ? 'opacity-100 translate-y-0 pointer-events-auto'
+            : 'opacity-0 -translate-y-4 pointer-events-none'
+        }`}
+      >
         {links.map(({ href, label }) => (
-        <Link key={href} href={href} className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-          {label}
-        </Link>
+          <Link key={href} href={href} className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+            {label}
+          </Link>
         ))}
       </nav>
     </header>
