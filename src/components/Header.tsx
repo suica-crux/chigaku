@@ -3,12 +3,19 @@
 import { useState, useRef, useEffect } from 'react';
 import { Menu, X } from 'lucide-react';
 import Link from 'next/link';
-// import ThemeToggleButton from './ThemeToggleButton';
 import Image from 'next/image';
 
 export default function Header() {
   const [isOpen, setIsOpen] = useState(false);
   const menuRef = useRef<HTMLDivElement>(null);
+
+  const links: { href: string; label: string }[] = [
+    { href: '/about', label: '紹介' },
+    { href: '/manual', label: 'マニュアル' },
+    { href: '/caution', label: '注意事項' },
+    { href: '/contact', label: 'お問い合わせ' },
+    { href: '/schedule', label: '活動予定' },
+  ];
 
   useEffect(() => {
     const handleClickOutside = (event: MouseEvent) => {
@@ -37,19 +44,11 @@ export default function Header() {
         </Link>
 
         <nav className="hidden space-x-6 md:flex">
-          <Link href="/about" className="inline-flex items-center hover:text-blue-500">
-            紹介
+          {links.map(({ href, label }) => (
+          <Link key={href} href={href} className="inline-flex items-center hover:text-blue-500">
+            {label}
           </Link>
-          <Link href="/manual" className="inline-flex items-center hover:text-blue-500">
-            マニュアル
-          </Link>
-          <Link href="/caution" className="inline-flex items-center hover:text-blue-500">
-            注意事項
-          </Link>
-          <Link href="/contact" className="inline-flex items-center hover:text-blue-500">
-            お問い合わせ
-          </Link>
-          {/* <ThemeToggleButton /> */}
+          ))}
         </nav>
 
         {/* for desktop */}
@@ -58,38 +57,28 @@ export default function Header() {
           className="p-4 -m-2 border rounded-md md:hidden border-border"
           onClick={() => setIsOpen(!isOpen)}
           aria-label="Toggle Menu"
-        >
+          >
           {
             isOpen ? <X size={24} /> : <Menu size={24} />
-            // <p>Menu</p>
           }
         </button>
       </div>
 
       {/* for mobile */}
+
       <nav
         ref={menuRef}
         className={`md:hidden bg-background shadow-md absolute top-16 left-0 w-full py-2 transition-all duration-300 ease-in-out transform ${
           isOpen
-            ? 'opacity-100 translate-y-0 pointer-events-auto'
-            : 'opacity-0 -translate-y-4 pointer-events-none'
-        }`}
-      >
-        <Link href="/about" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-          紹介
+          ? 'opacity-100 translate-y-0 pointer-events-auto'
+          : 'opacity-0 -translate-y-4 pointer-events-none'
+          }`}
+          >
+        {links.map(({ href, label }) => (
+        <Link key={href} href={href} className="block px-4 py-2" onClick={() => setIsOpen(false)}>
+          {label}
         </Link>
-        <Link href="/manual" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-          マニュアル
-        </Link>
-        <Link href="/caution" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-          注意事項
-        </Link>
-        <Link href="/contact" className="block px-4 py-2" onClick={() => setIsOpen(false)}>
-          お問い合わせ
-        </Link>
-        {/* <div className="block px-4 py-2">
-          <ThemeToggleButton />
-        </div> */}
+        ))}
       </nav>
     </header>
   );
