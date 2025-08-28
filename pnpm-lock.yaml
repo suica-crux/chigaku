@@ -12,8 +12,8 @@ importers:
         specifier: ^1.14.3
         version: 1.14.3(react@19.1.1)
       '@cloudinary/url-gen':
-        specifier: ^1.21.0
-        version: 1.21.0
+        specifier: ^1.22.0
+        version: 1.22.0
       '@heroicons/react':
         specifier: ^2.2.0
         version: 2.2.0(react@19.1.1)
@@ -601,11 +601,11 @@ packages:
     peerDependencies:
       react: ^16.3.0 || ^17.0.0 || ^18.0.0 || ^19.0.0
 
-  '@cloudinary/transformation-builder-sdk@1.17.0':
-    resolution: {integrity: sha512-zPHNtEpLkil+1obvLK7zHDMWAs9ZwUGI0GUKnMMkEC3pOLtKETswPBdLAjJTMH512lGc18vgdzogWdItPRN3Kg==}
+  '@cloudinary/transformation-builder-sdk@1.21.2':
+    resolution: {integrity: sha512-ehOgKUaP+Nvuf7B0TosmB8iilL0kdiVjzjl8tIK06cjvsNnwSJI3xP9nEJmKkvqNxwwFwvYXT+mxUTqnSv9JOA==}
 
-  '@cloudinary/url-gen@1.21.0':
-    resolution: {integrity: sha512-ctYcCzX3G3vcgnESTU2ET3K1XsBiXcEnBddCGV0QbR3fJhLLrIShjSMEwZoepgh4LAFOHJu9DzvLFr+E8R7c7g==}
+  '@cloudinary/url-gen@1.22.0':
+    resolution: {integrity: sha512-le8RMlgyC0JN3+FlC/YAlPYfvmJdtw8QGcSKDjCsfhS2CIem0mJl6ayti8bMoZ0P5wDvBewvRB0/dUQvhCzy3g==}
 
   '@emnapi/core@1.4.5':
     resolution: {integrity: sha512-XsLw1dEOpkSX/WucdqUhPWP7hDxSvZiY+fsUC14h+FtQ2Ifni4znbBt8punRX+Uj2JG/uDb8nEHVKvrVlvdZ5Q==}
@@ -4591,13 +4591,13 @@ snapshots:
       '@cloudinary/html': 1.13.4
       react: 19.1.1
 
-  '@cloudinary/transformation-builder-sdk@1.17.0':
+  '@cloudinary/transformation-builder-sdk@1.21.2':
     dependencies:
-      '@cloudinary/url-gen': 1.21.0
+      '@cloudinary/url-gen': 1.22.0
 
-  '@cloudinary/url-gen@1.21.0':
+  '@cloudinary/url-gen@1.22.0':
     dependencies:
-      '@cloudinary/transformation-builder-sdk': 1.17.0
+      '@cloudinary/transformation-builder-sdk': 1.21.2
 
   '@emnapi/core@1.4.5':
     dependencies:
