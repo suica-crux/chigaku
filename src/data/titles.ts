@@ -20,4 +20,5 @@ export const titles: Record<string, string> = {
   about: '地学部について',
   contact: 'お問い合わせ',
   caution: '注意事項',
+  iwakura: '岩倉祭について',
 };

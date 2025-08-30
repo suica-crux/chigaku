@@ -1,8 +1,8 @@
 import Text from './Text';
 
 interface DayInfo {
-  room: 's109' | 's110' | 'b202';
-  time: string;
+  room: 's109' | 's110' | 'b202' | 'iwakura';
+  time?: string;
 }
 
 interface CalendarProps {
@@ -26,6 +26,7 @@ export default function Calendar({ year, month, dayInfo }: CalendarProps) {
     s109: 'bg-pink-200 text-pink-800',
     s110: 'bg-purple-200 text-purple-800',
     b202: 'bg-blue-200 text-blue-800',
+    iwakura: 'bg-blue-200 text-blue-800',
   };
 
   const defaultDayClass = 'text-gray-400';
@@ -47,10 +48,14 @@ export default function Calendar({ year, month, dayInfo }: CalendarProps) {
   for (let d = 1; d <= daysInMonth; d++) {
     const info = dayInfo[d];
     const dayClass = info ? roomStyles[info.room] : defaultDayClass;
-
-    const startTime = info?.time.split('-')[0];
-    const endTime = info?.time.split('-')[1];
-
+    
+    let startTime;
+    let endTime;
+    if (info && info.time) {
+        startTime = info?.time.split('-')[0];
+        endTime = info?.time.split('-')[1];
+    }
+      
     cells.push(
       <div key={d} className="p-1">
         <div

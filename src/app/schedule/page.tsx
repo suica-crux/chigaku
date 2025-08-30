@@ -13,7 +13,7 @@ const Content: React.FC = () => {
         以下にスケジュールを載せておきます。
       </Text>
 
-      <CalendarLegend />
+      <CalendarLegend rooms />
       <Calendar
         year={2025}
         month={7}
