@@ -12,15 +12,28 @@ const roomLabels: Record<'s109' | 's110' | 'b202', string> = {
   b202: '万象館B202教室',
 };
 
-export default function CalendarLegend() {
+type Elements = {
+  rooms?: boolean;
+  iwakura?: boolean;
+};
+
+export default function CalendarLegend({ rooms, iwakura }: Elements) {
+  if (!rooms && !iwakura) throw new Error('At least one of "rooms" or "iwakura" must be true.');
   return (
     <div className="flex flex-wrap gap-4 mb-4 mt-4 items-center">
-      {(Object.keys(roomStyles) as Array<'s109' | 's110' | 'b202'>).map((code) => (
-        <div key={code} className="flex items-center space-x-1">
-          <span className={`${roomStyles[code]} w-4 h-4 rounded-sm border border-gray-300`} />
-          <Text className="text-sm">{roomLabels[code]}</Text>
+      {rooms &&
+        (Object.keys(roomStyles) as Array<'s109' | 's110' | 'b202'>).map((code) => (
+          <div key={code} className="flex items-center space-x-1">
+            <span className={`${roomStyles[code]} w-4 h-4 rounded-sm border border-gray-300`} />
+            <Text className="text-sm">{roomLabels[code]}</Text>
+          </div>
+        ))}
+      {iwakura && (
+        <div className="flex items-center space-x-1">
+          <span className="bg-blue-200 text-blue-800 w-4 h-4 rounded-sm border border-gray-300" />
+          <Text className="text-sm">岩倉祭模擬店実施日</Text>
         </div>
-      ))}
+      )}
     </div>
   );
 }
