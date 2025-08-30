@@ -18,7 +18,9 @@ export default function Home() {
       <Alert type="info">
         地学部は岩倉祭に模擬店を出店します！
         <br />
-        <Link href="/iwakura" className='underline'>詳細はこちら</Link>
+        <Link href="/iwakura" className="underline">
+          詳細はこちら
+        </Link>
       </Alert>
     </div>
   );

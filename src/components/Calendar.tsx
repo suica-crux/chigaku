@@ -48,14 +48,14 @@ export default function Calendar({ year, month, dayInfo }: CalendarProps) {
   for (let d = 1; d <= daysInMonth; d++) {
     const info = dayInfo[d];
     const dayClass = info ? roomStyles[info.room] : defaultDayClass;
-    
+
     let startTime;
     let endTime;
     if (info && info.time) {
-        startTime = info?.time.split('-')[0];
-        endTime = info?.time.split('-')[1];
+      startTime = info?.time.split('-')[0];
+      endTime = info?.time.split('-')[1];
     }
-      
+
     cells.push(
       <div key={d} className="p-1">
         <div

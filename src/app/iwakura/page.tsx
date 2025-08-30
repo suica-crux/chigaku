@@ -19,8 +19,8 @@ const Content: React.FC = () => {
         year={2025}
         month={9}
         dayInfo={{
-          27: { room: 'iwakura'},
-          28: { room: 'iwakura' }
+          27: { room: 'iwakura' },
+          28: { room: 'iwakura' },
         }}
       />
     </div>
