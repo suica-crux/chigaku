@@ -25,7 +25,9 @@ export async function POST(req: Request) {
     // メールを送信
     await resend.emails.send({
       from: process.env.RESEND_FROM,
-      to: [ process.env.RESEND_TO_ONE, process.env.RESEND_TO_TWO].filter((v): v is string => Boolean(v)),
+      to: [process.env.RESEND_TO_ONE, process.env.RESEND_TO_TWO].filter((v): v is string =>
+        Boolean(v)
+      ),
       subject: `新しいお問い合わせ from ${name}`,
       text: `新しいお問い合わせ
       名前: ${name}
