@@ -3,14 +3,14 @@
 type TextProperty = {
   children?: React.ReactNode;
   size?: 'normal' | 'sm' | 'xl' | 'lg';
-  colour?: 'gray' | 'blue' | 'red' | 'fade' | 'base';
+  color?: 'gray' | 'blue' | 'red' | 'fade' | 'base';
   className?: string;
 };
 
 export default function Text({
   children,
   size = 'normal',
-  colour = 'base',
+  color = 'base',
   className = '',
 }: TextProperty) {
   // 文字サイズ
@@ -23,17 +23,17 @@ export default function Text({
           ? 'text-xl'
           : 'text-base';
   // 文字色
-  const textColour =
-    colour === 'gray'
+  const textColor =
+    color === 'gray'
       ? 'text-gray-700'
-      : colour === 'blue'
+      : color === 'blue'
         ? 'text-blue-500'
-        : colour === 'red'
+        : color === 'red'
           ? 'text-red-500'
-          : colour === 'fade'
+          : color === 'fade'
             ? 'text-fgfade'
-            : colour === 'base'
+            : color === 'base'
               ? 'text-foreground'
               : 'text-foreground';
-  return <p className={`${className} ${textSize} ${textColour}`}>{children}</p>;
+  return <p className={`${className} ${textSize} ${textColor}`}>{children}</p>;
 }
