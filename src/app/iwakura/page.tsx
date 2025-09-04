@@ -18,8 +18,8 @@ const Content: React.FC = () => {
 
         <div className="flex justify-center mt-4">
           <Link
-            href="./reserve"
-            className="justify-center px-6 py-2 transition hover:bg-bginfo/80 rounded-xl border-bdinfo text-txinfo bg-bginfo"
+            href="/iwakura/reserve"
+            className="justify-center px-6 py-2 transition rounded-xl border-bdinfo text-txinfo bg-bginfo"
           >
             予約はこちら
           </Link>

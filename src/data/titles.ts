@@ -21,4 +21,5 @@ export const titles: Record<string, string> = {
   contact: 'お問い合わせ',
   caution: '注意事項',
   iwakura: '岩倉祭について',
+  reserve: '予約',
 };
