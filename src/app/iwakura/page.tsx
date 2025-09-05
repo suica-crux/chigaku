@@ -8,7 +8,7 @@ const Content: React.FC = () => {
   return (
     <>
       <div>
-        <Heading title="平日活動について" />
+        <Heading title="岩倉祭について" />
         <Text>
           地学部は岩倉祭に展示を出します！
           <br />
