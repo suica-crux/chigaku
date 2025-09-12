@@ -11,7 +11,7 @@ export default function ReservePage() {
     <div>
       <Heading title="岩倉祭予約" />
       <Text>地学部は、岩倉祭の天体ドーム見学に任意の事前予約を実施します。</Text>
-      <Timetable day={26} />
+      <Timetable date={26} startHour={9} endHour={17} workMinutes={10} breakMinutes={5} />
     </div>
   );
 }
