@@ -45,14 +45,25 @@ export default function Timetable({
 
       if (workEnd > end) break;
 
-      const workMinutesStr = workMinutes.getMinutes();
-      const workHourStr = workMinutes.getHour();
+      let workStartMinStr: string;
+      let workStartHourStr: string;
+      if (workStart.getMinutes() < 10) {
+        workStartMinStr = `0${workStart.getMinutes()}`;
+      } else {
+        workStartMinStr = `${workStart.getMinutes()}`;
+      }
+
+      if (workStart.getHours() < 10) {
+        workStartHourStr = `0${workStart.getHours()}`;
+      } else {
+        workStartHourStr = `${workStart.getHours()}`;
+      }
 
       slots.push({
         start: formatTime(workStart),
         end: formatTime(workEnd),
         status: 'available',
-        id: ``,
+        id: `${date}${workStartHourStr}${workStartMinStr}`,
       });
 
       const breakStart = new Date(workEnd);
@@ -100,11 +111,11 @@ export default function Timetable({
               return (
                 <li key={idx} className={`${className} rounded px-2 py-1 my-2`}>
                   <span className="truncate">
-                    {slot.start} - {slot.end}
+                    {slot.start} - {slot.end} : {slot.id}
                   </span>
                   <div className="flex flex-col items-center ml-3">
                     {icon}
-                    <span className="text-xs text-gray-500 mt-1">{label}</span>
+                    <span className="mt-1 text-xs text-gray-500">{label}</span>
                   </div>
                 </li>
               );
