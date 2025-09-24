@@ -1,6 +1,6 @@
 import Alert from '@/components/Alert';
 import Heading from '@/components/Heading';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import Text from '@/components/Text';
 
 export const metadata: Metadata = {

@@ -3,7 +3,7 @@
 type TextProperty = {
   children?: React.ReactNode;
   size?: 'normal' | 'sm' | 'xl' | 'lg';
-  color?: 'gray' | 'blue' | 'red' | 'fade' | 'base';
+  color?: 'gray' | 'blue' | 'red' | 'fade' | 'base' | string;
   className?: string;
 };
 
@@ -22,6 +22,7 @@ export default function Text({
         : size === 'lg'
           ? 'text-xl'
           : 'text-base';
+
   // 文字色
   const textColor =
     color === 'gray'
@@ -34,6 +35,9 @@ export default function Text({
             ? 'text-fgfade'
             : color === 'base'
               ? 'text-foreground'
-              : 'text-foreground';
-  return <p className={`${className} ${textSize} ${textColor}`}>{children}</p>;
+              : color === 'yellow'
+                ? 'text-yellow-400'
+                : 'text-foreground';
+
+  return <p className={`${textSize} ${textColor} ${className}`}>{children}</p>;
 }

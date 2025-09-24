@@ -31,7 +31,7 @@ export default function CalendarLegend({ rooms, iwakura }: Elements) {
       {iwakura && (
         <div className="flex items-center space-x-1">
           <span className="bg-blue-200 text-blue-800 w-4 h-4 rounded-sm border border-gray-300" />
-          <Text className="text-sm">岩倉祭模擬店実施日</Text>
+          <Text className="text-sm">岩倉祭展示実施日</Text>
         </div>
       )}
     </div>

@@ -22,7 +22,7 @@ export function getPages(current: string): {
 } {
   const index = order.indexOf(current);
   return {
-    previous: index > 0 ? order[index - 1] : null,
-    next: index >= 0 && index < order.length - 1 ? order[index + 1] : null,
+    previous: index > 0 ? (order[index - 1] ?? null) : null,
+    next: index >= 0 && index < order.length - 1 ? (order[index + 1] ?? null) : null,
   };
 }

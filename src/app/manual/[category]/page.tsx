@@ -3,7 +3,7 @@ import path from 'path';
 import Link from 'next/link';
 import Heading from '@/components/Heading';
 import { titleLoader } from '@/lib/titleLoader';
-import { Metadata } from 'next';
+import type { Metadata } from 'next';
 import ListItem from '@/components/ListItem';
 
 export async function generateStaticParams() {
@@ -82,9 +82,14 @@ export default async function CategoryPage(props: { params: Promise<{ category: 
       const topicMap = Object.fromEntries(loadedTopics.map((t) => [t.slug, t]));
       const orderedSlugs = new Set(topicOrder);
 
-      const orderedTopics = topicOrder.map((slug) => topicMap[slug]).filter(Boolean);
+      const orderedTopics = topicOrder
+        .map((slug) => topicMap[slug])
+        // .filter(Boolean);
+        .filter((t): t is { slug: string; title: string } => t !== undefined);
 
-      const rest = loadedTopics.filter((t) => !orderedSlugs.has(t.slug));
+      const rest = loadedTopics.filter(
+        (t): t is { slug: string; title: string } => !orderedSlugs.has(t.slug)
+      );
 
       topics = [...orderedTopics, ...rest];
     } else {
