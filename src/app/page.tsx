@@ -12,11 +12,11 @@ export default function Home() {
   return (
     <div>
       <Heading title="地学部へようこそ" />
-      <Text>地学部では、月に一度の夜間天体観測を行っています。</Text>
+      <Text>地学部では、月に約1回の夜間天体観測を行っています。</Text>
       <Text>スマホの方は右上のメニュー(三本線)から各ページを開いてください</Text>
 
       <Alert type="info">
-        地学部は岩倉祭に模擬店を出店します！
+        地学部は岩倉祭に展示を出します！
         <br />
         <Link href="/iwakura" className="underline">
           詳細はこちら

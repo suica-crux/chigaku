@@ -5,7 +5,6 @@ import Header from '@/components/Header';
 import Footer from '@/components/Footer';
 import Breadcrumbs from '@/components/Breadcrumbs';
 import { Toaster } from 'react-hot-toast';
-import BackToTop from '@/components/BackToTop';
 import OfflineAlert from '@/components/OfflineAlert';
 
 const mPlusRounded = M_PLUS_Rounded_1c({
@@ -60,7 +59,6 @@ export default function RootLayout({
           </main>
 
           {/* row-3 : 下部アイテム */}
-          <BackToTop />
         </div>
 
         <Footer />

@@ -10,28 +10,28 @@ interface AlertProps {
 }
 
 export default function Alert({ children, type }: AlertProps) {
-  let borderColour = 'border-bdinfo';
-  let bgColour = 'bg-bginfo';
-  let textColour = 'text-txinfo';
+  let borderColor = 'border-bdinfo';
+  let bgColor = 'bg-bginfo';
+  let textColor = 'text-txinfo';
   let Icon = InformationCircleIcon;
 
   if (type === 'warn') {
-    borderColour = 'border-bdwarn';
-    bgColour = 'bg-bgwarn';
-    textColour = 'text-txwarn';
+    borderColor = 'border-bdwarn';
+    bgColor = 'bg-bgwarn';
+    textColor = 'text-txwarn';
     Icon = XCircleIcon;
   } else if (type === 'caution') {
-    borderColour = 'border-bdcaution';
-    bgColour = 'bg-bgcaution';
-    textColour = 'text-txcaution';
+    borderColor = 'border-bdcaution';
+    bgColor = 'bg-bgcaution';
+    textColor = 'text-txcaution';
     Icon = ExclamationTriangleIcon;
   }
 
   return (
     <div
-      className={`flex items-start gap-3 border ${borderColour} ${bgColour} ${textColour} p-4 my-4 rounded-lg`}
+      className={`flex items-start gap-3 border ${borderColor} ${bgColor} ${textColor} p-4 my-4 rounded-lg`}
     >
-      <Icon className={`w-6 h-6 mt-1 shrink-0 ${textColour}`} />
+      <Icon className={`w-6 h-6 mt-1 shrink-0 ${textColor}`} />
       <div>{children}</div>
     </div>
   );

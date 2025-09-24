@@ -34,7 +34,7 @@ export default function NotFoundChildren() {
           title="404"
           subtitle="指定されたページは広大な宇宙のどこを探してもありませんでした。URLを確認してください。"
         />
-        <Text colour="fade" className="mt-4">
+        <Text color="fade" className="mt-4">
           URLの送信者または
           <Link href="/contact" className="text-blue-500 hover:text-blue-700">
             管理者に問い合わせて
