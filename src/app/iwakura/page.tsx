@@ -40,22 +40,20 @@ const Content: React.FC = () => {
           <Text>
             地学部で制作したプラネタリウムを上映します！
             <br />
-            上映場所は、万象館2階B201教室です。待合室の、同B202教室へお越しください。
+            待合室である万象館2階、B202教室にお越しください。
             <br />
-            昨年度とは内容が変更されているので、昨年度お越しの方も、ぜひご覧ください。
+            昨年とは内容が異なっています。昨年いらっしゃった方もぜひご覧ください。
             <br />
-            今年から一部の枠が予約制となりましたので、ご注意ください。
+            今年から、各上映9席のうち、3席ずつ事前予約が可能となりました。
             <br />
-            なお、予約枠に空きがある場合などは、当日参加の方がその枠に入れます。
-            <br />
-            予約、上演時間などの詳細は以下をご確認ください。
+            予約、上映時間などの詳細は以下の詳細画面をご確認ください。
           </Text>
           <div className="flex justify-center mt-2">
             <Link
               href="/iwakura/planetarium"
               className="justify-center px-6 py-2 transition rounded-xl border-bdinfo text-txinfo bg-bginfo underline"
             >
-              予約について
+              プラネタリウム上映について
             </Link>
           </div>
         </Section>
