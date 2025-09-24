@@ -1,4 +1,5 @@
 import Text from '@/components/Text';
+import Link from 'next/link';
 
 export default function CompletePage() {
   return (
