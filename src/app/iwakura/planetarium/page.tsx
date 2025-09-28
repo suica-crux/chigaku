@@ -42,7 +42,11 @@ export default function ReservePage() {
         </ul>
       </div>
 
-      <div className="flex justify-center mt-2">
+      <div className="p-2 my-4 rounded-lg">
+        <Text>予約受付は終了しました。ありがとうございました。</Text>
+      </div>
+
+      {/* <div className="flex justify-center mt-2">
         <Link
           href="https://form.run/@iwakura-planetarium"
           target="_blank"
@@ -50,7 +54,7 @@ export default function ReservePage() {
         >
           予約はこちら
         </Link>
-      </div>
+      </div> */}
     </div>
   );
 }
