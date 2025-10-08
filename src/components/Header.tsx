@@ -15,7 +15,7 @@ export default function Header() {
     { href: '/caution', label: '注意事項' },
     { href: '/contact', label: 'お問い合わせ' },
     // { href: '/schedule', label: '活動予定' },
-    { href: '/iwakura', label: '岩倉祭について' },
+    // { href: '/iwakura', label: '岩倉祭について' },
   ];
 
   useEffect(() => {
