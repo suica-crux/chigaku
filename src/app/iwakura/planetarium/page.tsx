@@ -10,9 +10,10 @@ export default function ReservePage() {
   return (
     <div>
       <Heading title="岩倉祭予約" />
-      <Text>地学部では、岩倉祭のプラネタリウムに任意の事前予約を実施します。</Text>
+      {/* <Text>地学部では、岩倉祭のプラネタリウムに任意の事前予約を実施します。</Text> */}
+      <Text>地学部では、2025年度岩倉祭のプラネタリウムに任意の事前予約を実施しました。</Text>
 
-      <div className="p-2 my-4 bg-bglite rounded-lg">
+      {/* <div className="p-2 my-4 bg-bglite rounded-lg">
         <Text size="lg" color="yellow">
           注意事項
         </Text>
@@ -40,7 +41,7 @@ export default function ReservePage() {
             複数人でご予約の方は、お手数ですが、各自の端末にてお一人ずつご予約をお願いいたします。
           </li>
         </ul>
-      </div>
+      </div> */}
 
       <div className="p-2 my-4 rounded-lg">
         <Text>予約受付は終了しました。ありがとうございました。</Text>

@@ -11,12 +11,14 @@ const Content: React.FC = () => {
       <div>
         <Heading title="岩倉祭について" />
         <Text>
-          地学部は岩倉祭に展示を出します！
+          {/* 地学部は岩倉祭に展示を出します！ */}
+          地学部は2025年度岩倉祭の展示を無事に行えました！
           <br />
-          詳細は以下をご確認ください。
+          {/* 詳細は以下をご確認ください。 */}
+          関わってくださった全ての方に感謝します。
         </Text>
 
-        <hr className="mt-4" />
+        {/* <hr className="mt-4" />
 
         <Section title="天体ドーム見学">
           <Text>
@@ -71,7 +73,7 @@ const Content: React.FC = () => {
             27: { room: 'iwakura' },
             28: { room: 'iwakura' },
           }}
-        />
+        /> */}
       </div>
     </>
   );
