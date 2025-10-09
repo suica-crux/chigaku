@@ -1,9 +1,9 @@
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
-import Calendar from '@/components/Calendar';
-import CalendarLegend from '@/components/CalendarLegend';
-import Link from 'next/link';
-import Section from '@/components/Section';
+// import Calendar from '@/components/Calendar';
+// import CalendarLegend from '@/components/CalendarLegend';
+// import Link from 'next/link';
+// import Section from '@/components/Section';
 
 const Content: React.FC = () => {
   return (

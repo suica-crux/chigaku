@@ -2,7 +2,7 @@
 
 import { usePathname } from 'next/navigation';
 import Link from 'next/link';
-import { SlashIcon } from '@heroicons/react/16/solid';
+import { Slash } from 'lucide-react';
 import { titleLoader } from '@/lib/titleLoader';
 
 export default function Breadcrumbs() {
@@ -36,7 +36,7 @@ export default function Breadcrumbs() {
       <ol className="list-reset flex space-x-2">
         {fullCrumbs.map((crumb, i) => (
           <li key={i} className="flex items-center">
-            {i > 0 && <SlashIcon className="h-4 w-4 text-fglight" />}
+            {i > 0 && <Slash className="h-4 w-4 text-fglight" />}
             {i < fullCrumbs.length - 1 ? (
               <Link href={crumb.href} className="hover:underline text-blue-500">
                 {crumb.label}

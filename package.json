@@ -13,7 +13,6 @@
   "dependencies": {
     "@cloudinary/react": "^1.14.3",
     "@cloudinary/url-gen": "^1.22.0",
-    "@heroicons/react": "^2.2.0",
     "firebase-admin": "^13.5.0",
     "lucide-react": "^0.545.0",
     "next": "15.5.4",
