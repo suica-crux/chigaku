@@ -1,8 +1,8 @@
 import type { Metadata } from 'next';
 import Heading from '@/components/Heading';
 import Text from '@/components/Text';
-import Alert from '@/components/Alert';
-import Link from 'next/link';
+// import Alert from '@/components/Alert';
+// import Link from 'next/link';
 
 export const metadata: Metadata = {
   title: 'トップページ - 同志社高校地学部',

@@ -63,7 +63,7 @@ const Content: React.FC = () => {
       <Text size="xl">蓋を開ける</Text>
       <Text>レンズの蓋を開けます。とても固いので、工具で叩くなどして開けましょう。</Text>
       <Alert type="warn">
-        <span className="text-xl">絶対に</span>太陽に向けないこと
+        <span className="text-xl">絶対に</span>太陽に向けない！太陽を覗かない！
       </Alert>
       <Picture pubId="IMG_3724_k1wcgi" caption="望遠鏡の蓋" />
       <Space />
