@@ -39,10 +39,12 @@ export default function Header() {
   return (
     <header className="fixed top-0 left-0 z-50 w-full shadow-md bg-subbg">
       <div className="flex items-center justify-between h-16 max-w-6xl px-4 mx-auto">
-        <Image src="/favicon.ico" width={40} height={40} alt="logo" className="rounded" />
-        <Link href="/" className="text-xl font-bold">
-          <span className="text-xl font-bold">同志社高校地学部</span>
-        </Link>
+        <div className="flex gap-x-2 items-center">
+          <Image src="/favicon.ico" width={40} height={40} alt="logo" className="rounded" />
+          <Link href="/" className="text-xl font-bold">
+            <span className="text-xl font-bold">同志社高校地学部</span>
+          </Link>
+        </div>
 
         <nav className="hidden space-x-6 md:flex">
           {links.map(({ href, label }) => (
