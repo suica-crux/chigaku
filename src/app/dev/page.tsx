@@ -143,37 +143,37 @@ export default function RootLayout({
               <div className="bg-slate-900 p-4 rounded-lg font-mono text-sm overflow-x-auto">
                 <div className="text-green-400">src/</div>
                 <div className="ml-4 text-blue-400">├── app/</div>
-                <div className="ml-8 text-yellow-400">│   ├── layout.tsx <span className="text-gray-500">// 全ページ共通レイアウト</span></div>
-                <div className="ml-8 text-pink-400">│   ├── page.tsx <span className="text-gray-500">// ホームページ (/) ← これ!</span></div>
+                <div className="ml-8 text-yellow-400">│   ├── layout.tsx <span className="text-gray-500">{'// 全ページ共通レイアウト'}</span></div>
+                <div className="ml-8 text-pink-400">│   ├── page.tsx <span className="text-gray-500">{'// ホームページ (/) ← これ!'}</span></div>
                 <div className="ml-8 text-gray-400">│   ├── globals.css</div>
                 <div className="ml-8 text-blue-400">│   ├── about/</div>
-                <div className="ml-12 text-pink-400">│   │   └── page.tsx <span className="text-gray-500">// /about</span></div>
+                <div className="ml-12 text-pink-400">│   │   └── page.tsx <span className="text-gray-500">{'// /about'}</span></div>
                 <div className="ml-8 text-blue-400">│   ├── contact/</div>
-                <div className="ml-12 text-pink-400">│   │   ├── page.tsx <span className="text-gray-500">// /contact</span></div>
-                <div className="ml-12 text-cyan-400">│   │   └── component.tsx <span className="text-gray-500">// フォーム用クライアントコンポーネント</span></div>
+                <div className="ml-12 text-pink-400">│   │   ├── page.tsx <span className="text-gray-500">{'// /contact'}</span></div>
+                <div className="ml-12 text-cyan-400">│   │   └── component.tsx <span className="text-gray-500">{'// フォーム用クライアントコンポーネント'}</span></div>
                 <div className="ml-8 text-blue-400">│   ├── manual/ <span className="text-orange-400">← 動的ルーティングの例!</span></div>
-                <div className="ml-12 text-pink-400">│   │   ├── page.tsx <span className="text-gray-500">// /manual (カテゴリ一覧)</span></div>
+                <div className="ml-12 text-pink-400">│   │   ├── page.tsx <span className="text-gray-500">{'// /manual (カテゴリ一覧)'}</span></div>
                 <div className="ml-12 text-blue-400">│   │   └── [category]/</div>
-                <div className="ml-16 text-pink-400">│   │       ├── page.tsx <span className="text-gray-500">// /manual/dome (記事一覧)</span></div>
+                <div className="ml-16 text-pink-400">│   │       ├── page.tsx <span className="text-gray-500">{'// /manual/dome (記事一覧)'}</span></div>
                 <div className="ml-16 text-blue-400">│   │       └── [topic]/</div>
-                <div className="ml-20 text-pink-400">│   │           └── page.tsx <span className="text-gray-500">// /manual/dome/prepare</span></div>
+                <div className="ml-20 text-pink-400">│   │           └── page.tsx <span className="text-gray-500">{'// /manual/dome/prepare'}</span></div>
                 <div className="ml-8 text-blue-400">│   └── api/</div>
                 <div className="ml-12 text-blue-400">│       └── contact/</div>
-                <div className="ml-16 text-orange-400">│           └── route.ts <span className="text-gray-500">// APIルート</span></div>
-                <div className="ml-4 text-purple-400">├── components/ <span className="text-gray-500">// 再利用可能なUI</span></div>
+                <div className="ml-16 text-orange-400">│           └── route.ts <span className="text-gray-500">{'// APIルート'}</span></div>
+                <div className="ml-4 text-purple-400">├── components/ <span className="text-gray-500">{'// 再利用可能なUI(画面のパーツ)'}</span></div>
                 <div className="ml-8 text-gray-300">│   ├── Heading.tsx</div>
                 <div className="ml-8 text-gray-300">│   ├── Text.tsx</div>
                 <div className="ml-8 text-gray-300">│   └── ...</div>
-                <div className="ml-4 text-purple-400">├── data/ <span className="text-gray-500">// 動的コンテンツ</span></div>
+                <div className="ml-4 text-purple-400">├── data/ <span className="text-gray-500">{'// 動的コンテンツ'}</span></div>
                 <div className="ml-8 text-blue-400">│   ├── manual/</div>
                 <div className="ml-12 text-blue-400">│   │   └── dome/</div>
                 <div className="ml-16 text-blue-400">│   │       ├── prepare/</div>
                 <div className="ml-20 text-cyan-400">│   │       │   └── content.tsx</div>
                 <div className="ml-16 text-blue-400">│   │       ├── howto/</div>
                 <div className="ml-20 text-cyan-400">│   │       │   └── content.tsx</div>
-                <div className="ml-16 text-orange-400">│   │       └── order.json <span className="text-gray-500">// 記事の順序</span></div>
-                <div className="ml-8 text-yellow-400">│   └── titles.ts <span className="text-gray-500">// URL→タイトル変換</span></div>
-                <div className="ml-4 text-purple-400">└── lib/ <span className="text-gray-500">// ユーティリティ関数</span></div>
+                <div className="ml-16 text-orange-400">│   │       └── order.json <span className="text-gray-500">{'// 記事の順序'}</span></div>
+                <div className="ml-8 text-yellow-400">│   └── titles.ts <span className="text-gray-500">{'// URL→タイトル変換'}</span></div>
+                <div className="ml-4 text-purple-400">└── lib/ <span className="text-gray-500">{'// ユーティリティ関数'}</span></div>
                 <div className="ml-8 text-gray-300">├── titleLoader.ts</div>
                 <div className="ml-8 text-gray-300">└── ...</div>
               </div>
@@ -218,7 +218,7 @@ export default function RootLayout({
                         <div className="bg-slate-900/70 p-3 rounded space-y-2 text-sm">
                           <p className="text-purple-300 font-semibold">例: /manual/dome にアクセス</p>
                           <div className="space-y-1">
-                            <div>1️⃣ <code className="text-orange-400">[category]</code> = "dome"</div>
+                            <div>1️⃣ <code className="text-orange-400">[category]</code> = &quot;dome&quot;</div>
                             <div>2️⃣ <code className="text-green-400">params.category</code>で値を取得</div>
                             <div>3️⃣ データを読み込んで表示</div>
                           </div>
@@ -459,7 +459,7 @@ export default function InteractivePage() {
                     <li>❌ <code className="bg-slate-700 px-2 py-1 rounded">page.tsx</code>を置き忘れる → ページが表示されない</li>
                     <li>❌ サーバーコンポーネントで<code className="bg-slate-700 px-2 py-1 rounded">useState</code>を使う → エラー</li>
                     <li>❌ <code className="bg-slate-700 px-2 py-1 rounded">default export</code>を忘れる → ビルドエラー</li>
-                    <li>✅ <code className="bg-slate-700 px-2 py-1 rounded">'use client'</code>は本当に必要な時だけ使いましょう</li>
+                    <li>✅ <code className="bg-slate-700 px-2 py-1 rounded">&apos;use client&apos;</code>は本当に必要な時だけ使いましょう</li>
                   </ul>
                 </div>
               </div>
