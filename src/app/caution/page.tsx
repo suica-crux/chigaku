@@ -23,9 +23,9 @@ export default function CuationPage() {
       <Alert type="caution">
         活動中は万象館から外に出ることはできません。飲み物や食べ物は活動が始まるまでに各自で用意しておいてください。
         <br />
-        食べ物のごみはごみ箱に捨てずに持ち帰ってください。
+        食べ物等のごみはごみ箱に捨てずに持ち帰ってください。
       </Alert>
-      <Alert type="caution">屋上にある銀色の筒に触れないように気を付けてください。</Alert>
+      <Alert type="caution">屋上にある銀色の筒を蹴ったり、触れなたりしないように気を付けてください。</Alert>
     </div>
   );
 }
