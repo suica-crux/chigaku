@@ -25,7 +25,9 @@ export default function CuationPage() {
         <br />
         食べ物等のごみはごみ箱に捨てずに持ち帰ってください。
       </Alert>
-      <Alert type="caution">屋上にある銀色の筒を蹴ったり、触れなたりしないように気を付けてください。</Alert>
+      <Alert type="caution">
+        屋上にある銀色の筒を蹴ったり、触れなたりしないように気を付けてください。
+      </Alert>
     </div>
   );
 }
