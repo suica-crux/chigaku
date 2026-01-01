@@ -15,7 +15,7 @@ export default function Footer() {
         </Link>
       </div>
       <div className="text-center mt-4 text-sm">
-        <Text color="fade">&copy; 2025 同志社高校地学部. All Rights Reserved.</Text>
+        <Text color="fade">&copy; 2025-2026 同志社高校地学部. All Rights Reserved.</Text>
       </div>
     </footer>
   );

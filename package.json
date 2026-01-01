@@ -1,6 +1,6 @@
 {
   "name": "chigaku",
-  "version": "0.1.0",
+  "version": "1.2.0",
   "private": true,
   "scripts": {
     "dev": "next dev",
@@ -39,5 +39,5 @@
     "typescript": "^5.9.3",
     "webpack": "^5.104.1"
   },
-  "packageManager": "pnpm@10.25.0"
+  "packageManager": "pnpm@10.27.0"
 }
