@@ -1,15 +1,15 @@
 import Text from './Text';
 
-interface DayInfo {
+type DayInfo = {
   room: 's109' | 's110' | 'b202' | 'iwakura';
   time?: string;
-}
+};
 
-interface CalendarProps {
+type CalendarProps = {
   year: number;
   month: number;
   dayInfo: Partial<Record<number, DayInfo>>;
-}
+};
 
 export default function Calendar({ year, month, dayInfo }: CalendarProps) {
   const headerStyles: Record<number, string> = {
