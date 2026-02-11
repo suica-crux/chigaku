@@ -37,7 +37,7 @@
     "prettier": "^3.8.1",
     "tailwindcss": "^4.1.18",
     "typescript": "^5.9.3",
-    "webpack": "^5.105.0"
+    "webpack": "^5.105.1"
   },
   "packageManager": "pnpm@10.27.0"
 }
