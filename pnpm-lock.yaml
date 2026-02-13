@@ -25,7 +25,7 @@ importers:
         version: 16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
       next-pwa:
         specifier: ^5.6.0
-        version: 5.6.0(@babel/core@7.27.4)(next@16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.1)
+        version: 5.6.0(@babel/core@7.27.4)(next@16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.2)
       react:
         specifier: ^19.2.4
         version: 19.2.4
@@ -82,8 +82,8 @@ importers:
         specifier: ^5.9.3
         version: 5.9.3
       webpack:
-        specifier: ^5.105.1
-        version: 5.105.1
+        specifier: ^5.105.2
+        version: 5.105.2
 
 packages:
 
@@ -3735,8 +3735,8 @@ packages:
     resolution: {integrity: sha512-yd1RBzSGanHkitROoPFd6qsrxt+oFhg/129YzheDGqeustzX0vTZJZsSsQjVQC4yzBQ56K55XU8gaNCtIzOnTg==}
     engines: {node: '>=10.13.0'}
 
-  webpack@5.105.1:
-    resolution: {integrity: sha512-Gdj3X74CLJJ8zy4URmK42W7wTZUJrqL+z8nyGEr4dTN0kb3nVs+ZvjbTOqRYPD7qX4tUmwyHL9Q9K6T1seW6Yw==}
+  webpack@5.105.2:
+    resolution: {integrity: sha512-dRXm0a2qcHPUBEzVk8uph0xWSjV/xZxenQQbLwnwP7caQCYpqG1qddwlyEkIDkYn0K8tvmcrZ+bOrzoQ3HxCDw==}
     engines: {node: '>=10.13.0'}
     hasBin: true
     peerDependencies:
@@ -5631,14 +5631,14 @@ snapshots:
 
   axobject-query@4.1.0: {}
 
-  babel-loader@8.4.1(@babel/core@7.27.4)(webpack@5.105.1):
+  babel-loader@8.4.1(@babel/core@7.27.4)(webpack@5.105.2):
     dependencies:
       '@babel/core': 7.27.4
       find-cache-dir: 3.3.2
       loader-utils: 2.0.4
       make-dir: 3.1.0
       schema-utils: 2.7.1
-      webpack: 5.105.1
+      webpack: 5.105.2
 
   babel-plugin-polyfill-corejs2@0.4.13(@babel/core@7.27.4):
     dependencies:
@@ -5735,10 +5735,10 @@ snapshots:
 
   chrome-trace-event@1.0.4: {}
 
-  clean-webpack-plugin@4.0.0(webpack@5.105.1):
+  clean-webpack-plugin@4.0.0(webpack@5.105.2):
     dependencies:
       del: 4.1.1
-      webpack: 5.105.1
+      webpack: 5.105.2
 
   client-only@0.0.1: {}
 
@@ -7185,14 +7185,14 @@ snapshots:
 
   neo-async@2.6.2: {}
 
-  next-pwa@5.6.0(@babel/core@7.27.4)(next@16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.1):
+  next-pwa@5.6.0(@babel/core@7.27.4)(next@16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4))(webpack@5.105.2):
     dependencies:
-      babel-loader: 8.4.1(@babel/core@7.27.4)(webpack@5.105.1)
-      clean-webpack-plugin: 4.0.0(webpack@5.105.1)
+      babel-loader: 8.4.1(@babel/core@7.27.4)(webpack@5.105.2)
+      clean-webpack-plugin: 4.0.0(webpack@5.105.2)
       globby: 11.1.0
       next: 16.1.6(@babel/core@7.27.4)(@opentelemetry/api@1.9.0)(react-dom@19.2.4(react@19.2.4))(react@19.2.4)
-      terser-webpack-plugin: 5.3.14(webpack@5.105.1)
-      workbox-webpack-plugin: 6.6.0(webpack@5.105.1)
+      terser-webpack-plugin: 5.3.14(webpack@5.105.2)
+      workbox-webpack-plugin: 6.6.0(webpack@5.105.2)
       workbox-window: 6.6.0
     transitivePeerDependencies:
       - '@babel/core'
@@ -7900,23 +7900,23 @@ snapshots:
       type-fest: 0.16.0
       unique-string: 2.0.0
 
-  terser-webpack-plugin@5.3.14(webpack@5.105.1):
+  terser-webpack-plugin@5.3.14(webpack@5.105.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       serialize-javascript: 6.0.2
       terser: 5.44.1
-      webpack: 5.105.1
+      webpack: 5.105.2
 
-  terser-webpack-plugin@5.3.16(webpack@5.105.1):
+  terser-webpack-plugin@5.3.16(webpack@5.105.2):
     dependencies:
       '@jridgewell/trace-mapping': 0.3.31
       jest-worker: 27.5.1
       schema-utils: 4.3.3
       serialize-javascript: 6.0.2
       terser: 5.46.0
-      webpack: 5.105.1
+      webpack: 5.105.2
 
   terser@5.44.1:
     dependencies:
@@ -8094,7 +8094,7 @@ snapshots:
 
   webpack-sources@3.3.3: {}
 
-  webpack@5.105.1:
+  webpack@5.105.2:
     dependencies:
       '@types/eslint-scope': 3.7.7
       '@types/estree': 1.0.8
@@ -8118,7 +8118,7 @@ snapshots:
       neo-async: 2.6.2
       schema-utils: 4.3.3
       tapable: 2.3.0
-      terser-webpack-plugin: 5.3.16(webpack@5.105.1)
+      terser-webpack-plugin: 5.3.16(webpack@5.105.2)
       watchpack: 2.5.1
       webpack-sources: 3.3.3
     transitivePeerDependencies:
@@ -8304,12 +8304,12 @@ snapshots:
 
   workbox-sw@6.6.0: {}
 
-  workbox-webpack-plugin@6.6.0(webpack@5.105.1):
+  workbox-webpack-plugin@6.6.0(webpack@5.105.2):
     dependencies:
       fast-json-stable-stringify: 2.1.0
       pretty-bytes: 5.6.0
       upath: 1.2.0
-      webpack: 5.105.1
+      webpack: 5.105.2
       webpack-sources: 1.4.3
       workbox-build: 6.6.0
     transitivePeerDependencies:
